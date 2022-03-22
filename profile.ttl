@@ -57,6 +57,13 @@
     prof:hasRole role:script
 .
 
+<https://w3id.org/profile/spaceprez/examples>
+    dcterms:title "Example data files"@en ;
+    dcterms:description "Example data files"@en ;
+    prof:hasArtifact "https://w3id.org/profile/spaceprez/examples"^^xsd:anyURI ;
+    prof:hasRole role:example
+.
+
 <https://w3id.org/profile/spaceprez/repo>
     dcterms:title "Profile code repository"@en ;
     dcterms:description "Code repository storing all Profile artifacts"@en ;

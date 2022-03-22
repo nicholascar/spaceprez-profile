@@ -1,3 +1,5 @@
+# Small invalid GeoSPARQL RDF data - one of the Feature's Geometries does not have GeoSPARQL data
+
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>

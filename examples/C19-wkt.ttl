@@ -1,3 +1,5 @@
+# Source GeoSPARQL RDF data - not valid since the geometries do not have GeoJSON serializations
+
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
