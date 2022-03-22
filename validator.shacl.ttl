@@ -1,0 +1,35 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+<https://w3id.org/profile/spaceprez>
+    a owl:Ontology ;
+    skos:prefLabel "SpacePrez Validator"@en ;
+    skos:definition "SHACL validator for the SpacePrez Profile"@en ;
+    dcterms:creator <https://linked.data.gov.au/org/surround> ;
+    dcterms:publisher <https://linked.data.gov.au/org/surround> ;
+    dcterms:created "2022-03-22"^^xsd:date ;
+    dcterms:modified "2022-03-22"^^xsd:date ;
+    owl:versionIRI <https://w3id.org/profile/spaceprez/validator/2.0>
+.
+
+<https://w3id.org/profile/spaceprez/validator/geojson>
+	a sh:NodeShape ;
+	sh:targetClass geo:Geometry ;
+	sh:targetObjectsOf geo:hasGeometry , geo:hasDefaultGeometry , geo:defaultGeometry ;
+	sh:targetSubjectsOf geo:asWKT , geo:asGML , geo:asGeoJSON , geo:asKML , geo:asDGGS , geo:hasSerialization ;
+    sh:property [
+        sh:path geo:asGeoJSON ;
+        sh:minCount 1 ;
+        sh:datatype geo:geoJSONLiteral ;
+        sh:message "Requirement GJ: All GeoSPARQL Geometry objects must contain a GeoJSON serialization"@en ;
+    ] ;
+.

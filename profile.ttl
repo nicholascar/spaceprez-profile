@@ -1,0 +1,70 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix sdo: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+<https://w3id.org/profile/spaceprez>
+    a prof:Profile ;
+    dcterms:created "2022-03-22"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/surround> ;
+    dcterms:modified "2022-03-22"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/surround> ;
+    skos:definition """A profile of the OGC LD API profile that contains a specification, validators and scripts used to define, test and convert RDF data to ensure that it can be used by the SpacePrez API tool."""@en ;
+    dcterms:title "SpacePrez Profile" ;
+    prof:hasResource 
+        <https://w3id.org/profile/spaceprez/spec> ,
+        <https://w3id.org/profile/spaceprez/validator> ,
+        <https://w3id.org/profile/spaceprez/compounded-validator> ,
+        <https://w3id.org/profile/spaceprez/conversion-script> ,
+        <https://w3id.org/profile/spaceprez/repo> ;
+    prof:isProfileOf <https://w3id.org/profile/ogcldapi> ;
+.
+    
+<https://w3id.org/profile/spaceprez/spec>
+    dcterms:title "Specification Document"@en ;
+    dcterms:description "The normative, human-readable, listing of profile requirements"@en ;
+    dcterms:conformsTo <https://www.w3.org/TR/html52/> ;
+    dcterms:format "text/html" ;
+    prof:hasArtifact "https://w3id.org/profile/spaceprez/spec"^^xsd:anyURI ;
+    prof:hasRole role:specification
+.
+
+<https://w3id.org/profile/spaceprez/validator>
+    dcterms:title "Validator in SHACL"@en ;
+    dcterms:description "A SHACL Shapes file to be used to test the conformance of RDF data to this profile"@en ;
+    dcterms:conformsTo <https://www.w3.org/TR/shacl/> ;
+    dcterms:format "text/turtle" ;
+    prof:hasArtifact "https://w3id.org/profile/spaceprez/validator"^^xsd:anyURI ;
+    prof:hasRole role:validation
+.
+
+<https://w3id.org/profile/spaceprez/compounded-validator>
+    dcterms:title "SpacePrez Compound Validator"@en ;
+    dcterms:description "Compounded SHACL validator for the SpacePrez Profile. This validator contains GeoSPARQL, OGC LD API Profile and SpacePrez Profile validators all in one"@en ;
+    dcterms:conformsTo <https://www.w3.org/TR/shacl/> ;
+    dcterms:format "text/turtle" ;
+    prof:hasArtifact "https://w3id.org/profile/spaceprez/compounded-validator"^^xsd:anyURI ;
+    prof:hasRole role:validation
+.
+
+<https://w3id.org/profile/spaceprez/conversion-script>
+    dcterms:title "GeoJSON converter script"@en ;
+    dcterms:description "Python code to convert GeoSPARQL geometry WKT serializations to GeoJSON serializations"@en ;
+    prof:hasArtifact "https://w3id.org/profile/spaceprez/conversion-script"^^xsd:anyURI ;
+    prof:hasRole role:script
+.
+
+<https://w3id.org/profile/spaceprez/repo>
+    dcterms:title "Profile code repository"@en ;
+    dcterms:description "Code repository storing all Profile artifacts"@en ;
+    prof:hasArtifact "https://w3id.org/profile/spaceprez/repo"^^xsd:anyURI ;
+    prof:hasRole role:repository
+.
+
+<https://linked.data.gov.au/org/surround> a sdo:Organization ;
+    sdo:name "SURROUND Australia Pty Ltd" ;
+    sdo:url "https://surroundaustralia.com"^^xsd:anyURI ;
+.

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <link href='//fonts.googleapis.com/css?family=Spartan:300,400' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Bebas+Neue:300,400' rel='stylesheet' type='text/css'>
+  <link href="style/surround.css" rel="stylesheet" type="text/css">
+  <title>SpacePrez Profile</title>
+</head>
+<body>
+  <div class="header" style="grid-column:1;"></div>
+  <div id="header" class="header" style="grid-column:2; display:grid; grid-template-columns:180px auto; grid-template-rows:50% 50%;">
+    <div id="logo" style="grid-column:1; grid-row:1/3">
+      <a href="https://surroundaustralia.com">
+        <img alt="SURROUND Logo" style="width:300px; margin-top:10px" src="style/logo-white.144b0ef3.svg" /></a>
+    </div>
+  </div><!-- #header -->
+  <div class="header" style="grid-column:3;"></div>
+  <div id="content" style="grid-column:2;">
+    <h1>SpacePrez Profile</h1>
+    <h3><em>A Profile</em></h3>
+      <section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>URI</dt>
+        <dd><code>https://w3id.org/profile/spaceprez</code></dd>
+
+        <dt><a href="https://www.w3.org/TR/dx-prof/#Property:isProfileOf">Is Profile Of</a></dt>
+        <dd>
+            <a href="https://w3id.org/profile/ogcldapi">https://w3id.org/profile/ogcldapi</a><br/>
+        </dd>
+
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher">Publisher</a>(s)</dt>
+        <dd>
+
+    <a href="https://linked.data.gov.au/org/surround">SURROUND Australia Pty Ltd</a><br/>
+        </dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator">Creator</a>(s)</dt>
+        <dd>
+
+    <a href="https://linked.data.gov.au/org/surround">SURROUND Australia Pty Ltd</a><br/>
+        </dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/created">Created</a></dt>
+        <dd>2022-03-22</dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/modified">Modified</a></dt>
+        <dd>2022-03-22</dd>
+        <dt>Profile RDF</dt>
+        <dd><a href="data_file.ttl">RDF (turtle)</a></dd>
+    </dl>
+      <dt><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasResource">Has Resource Descriptor(s)</a></dt>
+    <dd>
+          <a href="#https://w3id.org/profile/spaceprez/compounded-validator">SpacePrez Compound Validator</a><br/>
+          <a href="#https://w3id.org/profile/spaceprez/conversion-script">GeoJSON converter script</a><br/>
+          <a href="#https://w3id.org/profile/spaceprez/repo">Profile code repository</a><br/>
+          <a href="#https://w3id.org/profile/spaceprez/spec">Specification Document</a><br/>
+          <a href="#https://w3id.org/profile/spaceprez/validator">Validator in SHACL</a><br/>
+    </dd>
+    <h2>Description</h2>
+    <div id="comment">
+        <p>A profile of the OGC LD API profile that contains a specification, validators and scripts used to define, test and convert RDF data to ensure that it can be used by the SpacePrez API tool.</p>
+    </div>
+</section>
+      <section id="resource_descriptors">
+          <h2>Resource Descriptors</h2>
+
+
+
+
+
+          <div class="entity resource_descriptor" id="https://w3id.org/profile/spaceprez/compounded-validator">
+        <h3>SpacePrez Compound Validator</h3>
+        <table>
+            <tr>
+              <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
+              <td>Compounded SHACL validator for the SpacePrez Profile. This validator contains GeoSPARQL, OGC LD API Profile and SpacePrez Profile validators all in one</td>
+            </tr>
+
+            <tr>
+              <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+              <td>
+                <a href="https://w3id.org/profile/spaceprez/compounded-validator">https://w3id.org/profile/spaceprez/compounded-validator</a>
+              </td>
+            </tr>
+
+            <tr>
+              <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+              <td>
+
+                  <a href="http://www.w3.org/ns/dx/prof/role/validation">role:validation</a><br />
+
+              </td>
+            </tr>
+
+            <tr>
+              <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+              <td>
+
+                  <a href="https://www.w3.org/TR/shacl/">https://www.w3.org/TR/shacl/</a><br />
+
+              </td>
+            </tr>
+
+        </table>
+    </div>
+          <div class="entity resource_descriptor" id="https://w3id.org/profile/spaceprez/conversion-script">
+        <h3>GeoJSON converter script</h3>
+        <table>
+            <tr>
+              <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
+              <td>Python code to convert GeoSPARQL geometry WKT serializations to GeoJSON serializations</td>
+            </tr>
+
+            <tr>
+              <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+              <td>
+                <a href="https://w3id.org/profile/spaceprez/conversion-script">https://w3id.org/profile/spaceprez/conversion-script</a>
+              </td>
+            </tr>
+
+            <tr>
+              <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+              <td>
+
+                  <a href="http://www.w3.org/ns/dx/prof/role/script">role:script</a><br />
+
+              </td>
+            </tr>
+
+        </table>
+    </div>
+          <div class="entity resource_descriptor" id="https://w3id.org/profile/spaceprez/repo">
+        <h3>Profile code repository</h3>
+        <table>
+            <tr>
+              <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
+              <td>Code repository storing all Profile artifacts</td>
+            </tr>
+
+            <tr>
+              <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+              <td>
+                <a href="https://w3id.org/profile/spaceprez/repo">https://w3id.org/profile/spaceprez/repo</a>
+              </td>
+            </tr>
+
+            <tr>
+              <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+              <td>
+
+                  <a href="http://www.w3.org/ns/dx/prof/role/repository">role:repository</a><br />
+
+              </td>
+            </tr>
+
+        </table>
+    </div>
+          <div class="entity resource_descriptor" id="https://w3id.org/profile/spaceprez/spec">
+        <h3>Specification Document</h3>
+        <table>
+            <tr>
+              <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
+              <td>The normative, human-readable, listing of profile requirements</td>
+            </tr>
+
+            <tr>
+              <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+              <td>
+                <a href="https://w3id.org/profile/spaceprez/spec">https://w3id.org/profile/spaceprez/spec</a>
+              </td>
+            </tr>
+
+            <tr>
+              <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+              <td>
+
+                  <a href="http://www.w3.org/ns/dx/prof/role/specification">role:specification</a><br />
+
+              </td>
+            </tr>
+
+            <tr>
+              <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+              <td>
+
+                  <a href="https://www.w3.org/TR/html52/">https://www.w3.org/TR/html52/</a><br />
+
+              </td>
+            </tr>
+
+        </table>
+    </div>
+          <div class="entity resource_descriptor" id="https://w3id.org/profile/spaceprez/validator">
+        <h3>Validator in SHACL</h3>
+        <table>
+            <tr>
+              <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
+              <td>A SHACL Shapes file to be used to test the conformance of RDF data to this profile</td>
+            </tr>
+
+            <tr>
+              <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+              <td>
+                <a href="https://w3id.org/profile/spaceprez/validator">https://w3id.org/profile/spaceprez/validator</a>
+              </td>
+            </tr>
+
+            <tr>
+              <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+              <td>
+
+                  <a href="http://www.w3.org/ns/dx/prof/role/validation">role:validation</a><br />
+
+              </td>
+            </tr>
+
+            <tr>
+              <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+              <td>
+
+                  <a href="https://www.w3.org/TR/shacl/">https://www.w3.org/TR/shacl/</a><br />
+
+              </td>
+            </tr>
+
+        </table>
+    </div>
+      </section>
+      <section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>dcterms</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>prof</dt>
+        <dd><code>http://www.w3.org/ns/dx/prof/</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>role</dt>
+        <dd><code>http://www.w3.org/ns/dx/prof/role/</code></dd>
+        <dt>sdo</dt>
+        <dd><code>https://schema.org/</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+  </div><!-- #content -->
+  <div class="footer" style="grid-column:1;"></div>
+  <div class="footer" style="grid-column:2; display:grid; grid-column:70% 30%;">
+    <div style="grid-column:1;">
+      <img src="style/logo-dark.41edee3d.svg" alt="SURROUND white logo" />
+    </div>
+    <div style="grid-column:2;">
+      <div style="float:right;">
+        <h4>SURROUND Australia Pty Ltd</h4>
+        <p><a href="https://surroundaustralia.com">https://surroundaustralia.com</a></p>
+        <p style="font-style: italic;">
+          Level 9, Nishi Building<br />
+          2 Phillip Law Street, New Acton<br />
+          Canberra 2601<br />
+          Australia
+        </p>
+        <p><a href="info@surroundaustralia.com">info@surroundaustralia.com</a></p>
+        <p>
+          <a href="https://surroundaustralia.com/privacy-policy">Privacy Policy</a>
+        </p>
+        <p>&copy; SURROUND Australia Pty. Ltd. 2021</p>
+      </div>
+    </div>
+  </div><!-- #footer -->
+  <div class="footer" style="grid-column:3;"></div>
+</body>
+</html>

@@ -1,0 +1,2890 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX role: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<http://vocab.nerc.ac.uk/collection/C19>
+    a dcat:Dataset ;
+    dcterms:identifier "C19"^^xsd:token ;
+    role:RE_RegisterManager <https://www.bodc.ac.uk> ;
+    role:RE_RegisterOwner "SeaDataNet and MarineXML Vocabulary Content Governance Group" ;
+    dcterms:created "2021-10-28"^^xsd:date ;
+    dcterms:creator [
+            a sdo:Organization ;
+            sdo:name "SeaDataNet and MarineXML Vocabulary Content Governance Group" ;
+            sdo:parentOrganization <https://www.bodc.ac.uk>
+    ] ;
+    dcterms:description "Features specified as terms in the by the SeaVoX vocabulary governance to describe coherent regions of the hydrosphere. Includes land masses enclosing freshwater bodies."@en ;
+    dcterms:modified "2022-03-20"^^xsd:date ;
+    dcterms:provenance "This Dataset has been converted into this form from the original NERC SKOS vocabulary" ;
+    dcterms:publisher <https://nerc.ukri.org> ;
+    dcterms:title "SeaVoX salt and fresh water body gazetteer"@en ;
+    rdfs:member <http://vocab.nerc.ac.uk/collection/C19/current/> ;
+    geo:hasBoundingBox [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-180 90, 180 90, 180 -90, -180 -90, -180 90))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/>
+    a geo:FeatureCollection ;
+    dcterms:identifier "fc"^^xsd:token ;
+    dcterms:description "Waterbody Features"@en ;
+    dcterms:provenance "This Feature Collection was created directly from the NERC SKOS vocabulary C19" ;
+    dcterms:title "SeaVoX salt and fresh water body gazetteer's waterbody Feature Collection"@en ;
+    rdfs:member
+        <http://vocab.nerc.ac.uk/collection/C19/current/1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/10/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/10_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/10_10/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/10_10_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/10_11/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/10_12/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/10_14/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/10_2/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/10_3/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/10_4/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/10_5/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/10_6/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/10_6_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/10_7/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/10_8/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/10_9/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/1_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/1_10/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/1_11/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/1_12/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/1_13/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/1_14/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/1_15/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/1_2/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/1_3/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/1_4/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/1_5/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/1_6/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/1_7/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/1_7_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/1_8/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/1_9/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/2/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/2_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/2_2/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/2_2_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/2_2_2/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/2_3/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/2_4/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/2_5/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/2_6/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/2_7/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/2_8/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/2_9/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/3/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/3_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/3_1_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/3_1_1_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/3_1_1_2/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/3_1_1_3/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/3_1_1_4/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/3_1_1_5/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/3_1_2/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/3_1_2_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/3_1_2_2/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/3_1_2_3/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/3_1_2_4/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/3_2/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/3_3/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/3_4/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/4/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/4_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/4_2/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/4_3/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/5/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/5_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/5_10/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/5_11/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/5_12/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/5_13/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/5_14/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/5_15/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/5_15_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/5_16/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/5_16_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/5_17/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/5_2/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/5_3/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/5_4/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/5_5/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/5_6/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/5_7/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/5_8/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/5_9/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_10/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_11/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_12/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_13/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_14/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_15/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_16/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_17/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_18/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_19/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_2/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_20/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_21/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_22/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_23/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_3/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_4/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_5/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_6/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_7/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_8/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/6_9/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/7/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/7_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/7_10/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/7_11/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/7_12/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/7_13/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/7_2/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/7_3/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/7_4/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/7_4_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/7_4_2/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/7_5/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/7_6/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/7_6_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/7_7/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/7_8/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/7_8_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/7_9/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/8/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/8_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/8_2/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/8_3/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/8_3_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/8_3_2/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/8_3_3/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/8_4_/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/8_4_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/9/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/9_1/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/9_10/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/9_11/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/9_12/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/9_13/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/9_14/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/9_15/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/9_16/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/9_2/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/9_3/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/9_4/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/9_5/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/9_6/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/9_7/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/9_8/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/9_9/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/FRAM/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/GTLAK001/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/GTLAK007/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/GTLAK008/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/GTLAK009/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/GTLAK010/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/GTLAK011/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/GTLAK012/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/GTLAK013/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/GTLAK014/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/GTLAK015/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/GTLAK016/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/GTLAK017/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/GTLAK018/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/GTLAK019/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/GTLAK020/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/GTLAK021/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/GTLAK022/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/GTLAK023/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/GTLAK024/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/GTLAK025/> ,
+        # <http://vocab.nerc.ac.uk/collection/C19/current/IA/> ,
+        # <http://vocab.nerc.ac.uk/collection/C19/current/IJM/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/IRM/> ,
+        # <http://vocab.nerc.ac.uk/collection/C19/current/MKM/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/NSL01/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/NSL02/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/NSL03/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00001/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00002/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00003/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00004/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00005/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00006/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00007/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00008/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00009/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00010/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00011/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00012/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00013/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00014/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00015/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00016/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00017/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00018/> ,
+        # <http://vocab.nerc.ac.uk/collection/C19/current/SVX00019/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00020/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00021/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00022/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00023/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00024/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/SVX00025/> ,
+        # <http://vocab.nerc.ac.uk/collection/C19/current/SVX00026/> ,
+        # <http://vocab.nerc.ac.uk/collection/C19/current/SVX00027/> ,
+        # <http://vocab.nerc.ac.uk/collection/C19/current/SVX00028/> ,
+        # <http://vocab.nerc.ac.uk/collection/C19/current/SVX00029/> ,
+        # <http://vocab.nerc.ac.uk/collection/C19/current/SVX00030/> ,
+        # <http://vocab.nerc.ac.uk/collection/C19/current/SVX00031/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN001/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN002/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN003/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN004/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN005/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN006/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN007/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN008/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN009/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN010/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN011/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN012/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN013/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN014/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN015/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN016/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN017/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN018/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN019/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN020/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN021/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN022/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN023/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN024/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN025/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN026/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN027/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN028/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN029/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN030/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN031/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN032/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN033/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN034/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN035/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN036/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN037/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN038/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN039/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN040/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN041/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN042/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN043/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN044/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN045/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN046/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN047/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN048/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN049/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN050/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN051/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN052/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN053/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN054/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN055/> ,
+        <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN056/>
+        # <http://vocab.nerc.ac.uk/collection/C19/current/ZZ/> ;
+        ;
+    geo:hasBoundingBox [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-180 90, 180 90, 180 -90, -180 -90, -180 90))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<https://nerc.ukri.org>
+    a sdo:Organization ;
+    sdo:name "Natural Environment Research Council" ;
+    sdo:url "https://nerc.ukri.org"^^xsd:anyURI ;
+.
+
+<https://www.bodc.ac.uk>
+    a sdo:Organization ;
+    sdo:name "British Oceanographic Data Centre" ;
+    sdo:url "https://www.bodc.ac.uk"^^xsd:anyURI ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/1/>
+    a geo:Feature ;
+    rdfs:label "North Atlantic Ocean"@en ;
+    dcterms:identifier "SDN:C19::1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-98.6366075146413 66.4746446520277, 12.191601420124 66.4746446520277, 12.191601420124 -2.02739373666743, -98.6366075146413 -2.02739373666743, -98.6366075146413 66.4746446520277))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/10/>
+    a geo:Feature ;
+    rdfs:label "Southern Ocean"@en ;
+    dcterms:identifier "SDN:C19::10"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-180 -60, 180 -60, 180 -77.265442, -180 -77.265442, -180 -60))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/10_1/>
+    a geo:Feature ;
+    rdfs:label "Weddell Sea"@en ;
+    dcterms:identifier "SDN:C19::10_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-62.7811432879285 -58.6066295940797, -11.7987402082667 -58.6066295940797, -11.7987402082667 -79.6311732724031, -62.7811432879285 -79.6311732724031, -62.7811432879285 -58.6066295940797))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/10_10/>
+    a geo:Feature ;
+    rdfs:label "Ross Sea"@en ;
+    dcterms:identifier "SDN:C19::10_10"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((162.313568115504 -71.2999992376268, -157.830231096488 -71.2999992376268, -157.830231096488 -78.5702838907474, 162.313568115504 -78.5702838907474, 162.313568115504 -71.2999992376268))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/10_10_1/>
+    a geo:Feature ;
+    rdfs:label "McMurdo Sound"@en ;
+    dcterms:identifier "SDN:C19::10_10_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((163.091232783097 -77.0353348187163, 166.938772466878 -77.0353348187163, 166.938772466878 -78.0812422859424, 163.091232783097 -78.0812422859424, 163.091232783097 -77.0353348187163))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/10_11/>
+    a geo:Feature ;
+    rdfs:label "Amundsen Sea"@en ;
+    dcterms:identifier "SDN:C19::10_11"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-126.2612 -72.000023, -100.902525219731 -72.000023, -100.902525219731 -75.252151, -126.2612 -75.252151, -126.2612 -72.000023))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/10_12/>
+    a geo:Feature ;
+    rdfs:label "Bellingshausen Sea"@en ;
+    dcterms:identifier "SDN:C19::10_12"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-102.471732585353 -66.5823414137473, -66.777715913668 -66.5823414137473, -66.777715913668 -76.0213229323758, -102.471732585353 -76.0213229323758, -102.471732585353 -66.5823414137473))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/10_14/>
+    a geo:Feature ;
+    rdfs:label "Bransfield Strait"@en ;
+    dcterms:identifier "SDN:C19::10_14"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-62.725624 -60.8799516662101, -53.9878554077884 -60.8799516662101, -53.9878554077884 -64.3240204415912, -62.725624 -64.3240204415912, -62.725624 -60.8799516662101))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/10_2/>
+    a geo:Feature ;
+    rdfs:label "Lazarev Sea"@en ;
+    dcterms:identifier "SDN:C19::10_2"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((0 -65, 14.000045 -65, 14.000045 -70.328491, 0 -70.328491, 0 -65))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/10_3/>
+    a geo:Feature ;
+    rdfs:label "Riiser-Larsen Sea"@en ;
+    dcterms:identifier "SDN:C19::10_3"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((14 -65, 33.75 -65, 33.75 -70.427933, 14 -70.427933, 14 -65))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/10_4/>
+    a geo:Feature ;
+    rdfs:label "Cosmonauts Sea"@en ;
+    dcterms:identifier "SDN:C19::10_4"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((33.736633 -65, 53.800001 -65, 53.800001 -70.096443, 33.736633 -70.096443, 33.736633 -65))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/10_5/>
+    a geo:Feature ;
+    rdfs:label "Cooperation Sea"@en ;
+    dcterms:identifier "SDN:C19::10_5"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((53.8 -65, 82.391808 -65, 82.391808 -69.740898, 53.8 -69.740898, 53.8 -65))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/10_6/>
+    a geo:Feature ;
+    rdfs:label "Davis Sea"@en ;
+    dcterms:identifier "SDN:C19::10_6"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((88.016631 -64, 95.7107394826349 -64, 95.7107394826349 -66.0072864731777, 88.016631 -66.0072864731777, 88.016631 -64))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/10_6_1/>
+    a geo:Feature ;
+    rdfs:label "Tryoshnikova Gulf"@en ;
+    dcterms:identifier "SDN:C19::10_6_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((88.016631 -65.182149, 95.7223974623793 -65.182149, 95.7223974623793 -67.3002116182639, 88.016631 -67.3002116182639, 88.016631 -65.182149))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/10_7/>
+    a geo:Feature ;
+    rdfs:label "Mawson Sea"@en ;
+    dcterms:identifier "SDN:C19::10_7"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((95.58137 -64, 113.203329 -64, 113.203329 -66.967232, 95.58137 -66.967232, 95.58137 -64))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/10_8/>
+    a geo:Feature ;
+    rdfs:label "Dumont D'Urville Sea"@en ;
+    dcterms:identifier "SDN:C19::10_8"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((136.185089 -63.9726155322327, 146.83333 -63.9726155322327, 146.83333 -67.897948, 136.185089 -67.897948, 136.185089 -63.9726155322327))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/10_9/>
+    a geo:Feature ;
+    rdfs:label "Somov Sea"@en ;
+    dcterms:identifier "SDN:C19::10_9"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((146.224958720603 -63.9604434410333, 171.035594926445 -63.9604434410333, 171.035594926445 -71.6899721644176, 146.224958720603 -71.6899721644176, 146.224958720603 -63.9604434410333))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/1_1/>
+    a geo:Feature ;
+    rdfs:label "Skagerrak"@en ;
+    dcterms:identifier "SDN:C19::1_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((7.04112103559301 60.1161646344221, 12.1329805833777 60.1161646344221, 12.1329805833777 55.8183042153228, 7.04112103559301 55.8183042153228, 7.04112103559301 60.1161646344221))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/1_10/>
+    a geo:Feature ;
+    rdfs:label "Caribbean Sea"@en ;
+    dcterms:identifier "SDN:C19::1_10"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-90.1025809289272 23.8544740489454, -58.5277834563413 23.8544740489454, -58.5277834563413 4.36829261895392, -90.1025809289272 4.36829261895392, -90.1025809289272 23.8544740489454))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/1_11/>
+    a geo:Feature ;
+    rdfs:label "Gulf of Mexico"@en ;
+    dcterms:identifier "SDN:C19::1_11"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-100.338765715161 34.6148246680002, -84.9952019269442 34.6148246680002, -84.9952019269442 16.6421432610885, -100.338765715161 16.6421432610885, -100.338765715161 34.6148246680002))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/1_12/>
+    a geo:Feature ;
+    rdfs:label "Straits of Florida"@en ;
+    dcterms:identifier "SDN:C19::1_12"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-83.8069659714265 28.0321011341999, -77.8816033881292 28.0321011341999, -77.8816033881292 21.9281536414544, -83.8069659714265 21.9281536414544, -83.8069659714265 28.0321011341999))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/1_13/>
+    a geo:Feature ;
+    rdfs:label "Bay of Fundy"@en ;
+    dcterms:identifier "SDN:C19::1_13"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-67.3647016281391 46.2824848354445, -63.2597647285789 46.2824848354445, -63.2597647285789 43.8587953912947, -67.3647016281391 43.8587953912947, -67.3647016281391 46.2824848354445))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/1_14/>
+    a geo:Feature ;
+    rdfs:label "Gulf of St. Lawrence"@en ;
+    dcterms:identifier "SDN:C19::1_14"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-67.1757006255642 52.3140506057504, -54.2185031867343 52.3140506057504, -54.2185031867343 44.6446702156126, -67.1757006255642 44.6446702156126, -67.1757006255642 52.3140506057504))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/1_15/>
+    a geo:Feature ;
+    rdfs:label "Labrador Sea"@en ;
+    dcterms:identifier "SDN:C19::1_15"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-64.3021282538129 60.0001087188186, -43.7830757882335 60.0001087188186, -43.7830757882335 47.386838925804, -64.3021282538129 47.386838925804, -64.3021282538129 60.0001087188186))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/1_2/>
+    a geo:Feature ;
+    rdfs:label "North Sea"@en ;
+    dcterms:identifier "SDN:C19::1_2"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-5.11211185909971 63.5822291317627, 9.98777190749643 63.5822291317627, 9.98777190749643 49.2182615683599, -5.11211185909971 49.2182615683599, -5.11211185909971 63.5822291317627))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/1_3/>
+    a geo:Feature ;
+    rdfs:label "Inner Seas off the West Coast of Scotland"@en ;
+    dcterms:identifier "SDN:C19::1_3"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-8.29537427315771 59.2675332143557, -3.66050968964143 59.2675332143557, -3.66050968964143 54.0579996740863, -8.29537427315771 54.0579996740863, -8.29537427315771 59.2675332143557))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/1_4/>
+    a geo:Feature ;
+    rdfs:label "Irish Sea"@en ;
+    dcterms:identifier "SDN:C19::1_4"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-7.11114770535259 55.445712487712, -2.31308982242631 55.445712487712, -2.31308982242631 51.535029928431, -7.11114770535259 51.535029928431, -7.11114770535259 55.445712487712))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/1_5/>
+    a geo:Feature ;
+    rdfs:label "Bristol Channel"@en ;
+    dcterms:identifier "SDN:C19::1_5"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-4.92793354527336 51.8177489225295, -2.33951017970547 51.8177489225295, -2.33951017970547 50.9821892370407, -4.92793354527336 50.9821892370407, -4.92793354527336 51.8177489225295))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/1_6/>
+    a geo:Feature ;
+    rdfs:label "Celtic Sea"@en ;
+    dcterms:identifier "SDN:C19::1_6"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-12.2128460269809 54.0010154819428, -3.01587804939607 54.0010154819428, -3.01587804939607 46.2707246368092, -12.2128460269809 46.2707246368092, -12.2128460269809 54.0010154819428))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/1_7/>
+    a geo:Feature ;
+    rdfs:label "English Channel"@en ;
+    dcterms:identifier "SDN:C19::1_7"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-5.49429980797459 51.3045895719078, 2.16298072468261 51.3045895719078, 2.16298072468261 48.1318819932155, -5.49429980797459 48.1318819932155, -5.49429980797459 51.3045895719078))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/1_7_1/>
+    a geo:Feature ;
+    rdfs:label "Dover Strait"@en ;
+    dcterms:identifier "SDN:C19::1_7_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((0.238905062615011 51.7815577530154, 2.74490848884949 51.7815577530154, 2.74490848884949 49.7178807509394, 0.238905062615011 49.7178807509394, 0.238905062615011 51.7815577530154))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/1_8/>
+    a geo:Feature ;
+    rdfs:label "Bay of Biscay"@en ;
+    dcterms:identifier "SDN:C19::1_8"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-7.91547346286708 48.7084032584016, 0.173521562870352 48.7084032584016, 0.173521562870352 40.4577532604498, -7.91547346286708 40.4577532604498, -7.91547346286708 48.7084032584016))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/1_9/>
+    a geo:Feature ;
+    rdfs:label "Gulf of Guinea"@en ;
+    dcterms:identifier "SDN:C19::1_9"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-7.73000723059527 9.73715103192643, 11.2814496602502 9.73715103192643, 11.2814496602502 -1.08453325332716, -7.73000723059527 -1.08453325332716, -7.73000723059527 9.73715103192643))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/2/>
+    a geo:Feature ;
+    rdfs:label "Baltic Sea"@en ;
+    dcterms:identifier "SDN:C19::2"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((7.66342246316562 68.0376463519381, 30.3539489622921 68.0376463519381, 30.3539489622921 58.0181957799051, 7.66342246316562 58.0181957799051, 7.66342246316562 68.0376463519381))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/2_1/>
+    a geo:Feature ;
+    rdfs:label "Central Baltic Sea"@en ;
+    dcterms:identifier "SDN:C19::2_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((9.40209984779449 61.6091913208014, 24.7550082544627 61.6091913208014, 24.7550082544627 50.4010370772383, 9.40209984779449 50.4010370772383, 9.40209984779449 61.6091913208014))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/2_2/>
+    a geo:Feature ;
+    rdfs:label "Gulf of Bothnia"@en ;
+    dcterms:identifier "SDN:C19::2_2"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((16.6309783282883 68.0035491700105, 25.6685267284484 68.0035491700105, 25.6685267284484 58.2908772646299, 16.6309783282883 58.2908772646299, 16.6309783282883 68.0035491700105))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/2_2_1/>
+    a geo:Feature ;
+    rdfs:label "Bothnian Sea"@en ;
+    dcterms:identifier "SDN:C19::2_2_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((17.0391 63.7837, 23.2625 63.7837, 23.2625 59.6779, 17.0391 59.6779, 17.0391 63.7837))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/2_2_2/>
+    a geo:Feature ;
+    rdfs:label "Bay of Bothnia"@en ;
+    dcterms:identifier "SDN:C19::2_2_2"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((20.4 65.9071, 25.5091 65.9071, 25.5091 63.1546, 20.4 63.1546, 20.4 65.9071))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/2_3/>
+    a geo:Feature ;
+    rdfs:label "Gulf of Finland"@en ;
+    dcterms:identifier "SDN:C19::2_3"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((22.8538865206011 60.8875420441396, 30.3766571568766 60.8875420441396, 30.3766571568766 59.6249644894055, 22.8538865206011 59.6249644894055, 22.8538865206011 60.8875420441396))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/2_4/>
+    a geo:Feature ;
+    rdfs:label "Sound Sea"@en ;
+    dcterms:identifier "SDN:C19::2_4"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((22.5508589334926 59.2352593304055, 23.781628884535 59.2352593304055, 23.781628884535 58.4120916744041, 22.5508589334926 58.4120916744041, 22.5508589334926 59.2352593304055))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/2_5/>
+    a geo:Feature ;
+    rdfs:label "Gulf of Riga"@en ;
+    dcterms:identifier "SDN:C19::2_5"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((21.6792833385546 58.5829280318895, 24.594548857646 58.5829280318895, 24.594548857646 56.90022601052, 21.6792833385546 56.90022601052, 21.6792833385546 58.5829280318895))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/2_6/>
+    a geo:Feature ;
+    rdfs:label "The Sound"@en ;
+    dcterms:identifier "SDN:C19::2_6"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((11.8867483888843 56.31893186935, 13.1449102113045 56.31893186935, 13.1449102113045 55.0540632567564, 11.8867483888843 55.0540632567564, 11.8867483888843 56.31893186935))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/2_7/>
+    a geo:Feature ;
+    rdfs:label "Storebaelt"@en ;
+    dcterms:identifier "SDN:C19::2_7"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((10.4866650546361 55.7673302963765, 11.9837496841802 55.7673302963765, 11.9837496841802 54.6343426695567, 10.4866650546361 54.6343426695567, 10.4866650546361 55.7673302963765))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/2_8/>
+    a geo:Feature ;
+    rdfs:label "Lillebaelt"@en ;
+    dcterms:identifier "SDN:C19::2_8"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((9.41487763204201 55.7200836698241, 10.795897742106 55.7200836698241, 10.795897742106 54.7237186116387, 9.41487763204201 54.7237186116387, 9.41487763204201 55.7200836698241))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/2_9/>
+    a geo:Feature ;
+    rdfs:label "Kattegat"@en ;
+    dcterms:identifier "SDN:C19::2_9"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((9.8591 57.7462, 12.9491 57.7462, 12.9491 55.437, 9.8591 55.437, 9.8591 57.7462))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/3/>
+    a geo:Feature ;
+    rdfs:label "Mediterranean Region"@en ;
+    dcterms:identifier "SDN:C19::3"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-5.62365613065902 47.4231413342387, 42.3595674529535 47.4231413342387, 42.3595674529535 28.8598820455435, -5.62365613065902 28.8598820455435, -5.62365613065902 47.4231413342387))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/3_1/>
+    a geo:Feature ;
+    rdfs:label "Mediterranean Sea"@en ;
+    dcterms:identifier "SDN:C19::3_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-3.3025681795047 49.3062604137295, 36.20932 49.3062604137295, 36.20932 27.0586820159975, -3.3025681795047 27.0586820159975, -3.3025681795047 49.3062604137295))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/3_1_1/>
+    a geo:Feature ;
+    rdfs:label "Mediterranean Sea, Western Basin"@en ;
+    dcterms:identifier "SDN:C19::3_1_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-5.8222684991148 45.3031219656981, 16.4067836523192 45.3031219656981, 16.4067836523192 34.5646984847968, -5.8222684991148 34.5646984847968, -5.8222684991148 45.3031219656981))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/3_1_1_1/>
+    a geo:Feature ;
+    rdfs:label "Strait of Gibraltar"@en ;
+    dcterms:identifier "SDN:C19::3_1_1_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-6.03626063764776 36.3361847868261, -5.28168369826115 36.3361847868261, -5.28168369826115 35.7454368855593, -6.03626063764776 35.7454368855593, -6.03626063764776 36.3361847868261))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/3_1_1_2/>
+    a geo:Feature ;
+    rdfs:label "Alboran Sea"@en ;
+    dcterms:identifier "SDN:C19::3_1_1_2"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-5.37386954944208 36.9072729456757, -1.16490895931982 36.9072729456757, -1.16490895931982 35.0536702903627, -5.37386954944208 35.0536702903627, -5.37386954944208 36.9072729456757))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/3_1_1_3/>
+    a geo:Feature ;
+    rdfs:label "Balearic Sea"@en ;
+    dcterms:identifier "SDN:C19::3_1_1_3"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-0.72391702692485 42.0076027803427, 4.393248734837 42.0076027803427, 4.393248734837 38.0497354627067, -0.72391702692485 38.0497354627067, -0.72391702692485 42.0076027803427))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/3_1_1_4/>
+    a geo:Feature ;
+    rdfs:label "Ligurian Sea"@en ;
+    dcterms:identifier "SDN:C19::3_1_1_4"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((7.50602103142711 44.8429817050474, 10.8089067322128 44.8429817050474, 10.8089067322128 42.6238935636352, 7.50602103142711 42.6238935636352, 7.50602103142711 44.8429817050474))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/3_1_1_5/>
+    a geo:Feature ;
+    rdfs:label "Tyrrhenian Sea"@en ;
+    dcterms:identifier "SDN:C19::3_1_1_5"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((8.30662554402308 43.281422157179, 16.8882811262009 43.281422157179, 16.8882811262009 36.8852674676089, 8.30662554402308 36.8852674676089, 8.30662554402308 43.281422157179))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/3_1_2/>
+    a geo:Feature ;
+    rdfs:label "Mediterranean Sea, Eastern Basin"@en ;
+    dcterms:identifier "SDN:C19::3_1_2"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((7.88629706121308 46.2219871961497, 36.8470263052533 46.2219871961497, 36.8470263052533 24.9597921509069, 7.88629706121308 24.9597921509069, 7.88629706121308 46.2219871961497))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/3_1_2_1/>
+    a geo:Feature ;
+    rdfs:label "Adriatic Sea"@en ;
+    dcterms:identifier "SDN:C19::3_1_2_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((11.417223246963 46.4480840347487, 20.8730094658656 46.4480840347487, 20.8730094658656 38.9318297296407, 11.417223246963 38.9318297296407, 11.417223246963 46.4480840347487))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/3_1_2_2/>
+    a geo:Feature ;
+    rdfs:label "Strait of Sicily"@en ;
+    dcterms:identifier "SDN:C19::3_1_2_2"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((10.4679661755769 37.8001992879016, 15.1330184267499 37.8001992879016, 15.1330184267499 35.2333353384438, 10.4679661755769 35.2333353384438, 10.4679661755769 37.8001992879016))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/3_1_2_3/>
+    a geo:Feature ;
+    rdfs:label "Ionian Sea"@en ;
+    dcterms:identifier "SDN:C19::3_1_2_3"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((15.0023966458851 40.6947180846685, 23.7387617519548 40.6947180846685, 23.7387617519548 35.822971, 15.0023966458851 35.822971, 15.0023966458851 40.6947180846685))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/3_1_2_4/>
+    a geo:Feature ;
+    rdfs:label "Aegean Sea"@en ;
+    dcterms:identifier "SDN:C19::3_1_2_4"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((21.7230332361079 42.0629816602233, 28.9568985480275 42.0629816602233, 28.9568985480275 36.0586037432603, 21.7230332361079 36.0586037432603, 21.7230332361079 42.0629816602233))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/3_2/>
+    a geo:Feature ;
+    rdfs:label "Sea of Marmara"@en ;
+    dcterms:identifier "SDN:C19::3_2"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((26.0646738236528 41.3503457454524, 29.9762259988747 41.3503457454524, 29.9762259988747 39.9111283672463, 26.0646738236528 39.9111283672463, 26.0646738236528 41.3503457454524))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/3_3/>
+    a geo:Feature ;
+    rdfs:label "Black Sea"@en ;
+    dcterms:identifier "SDN:C19::3_3"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((27.2790432070243 46.9911669655621, 41.8867001172179 46.9911669655621, 41.8867001172179 40.8338214801488, 27.2790432070243 40.8338214801488, 27.2790432070243 46.9911669655621))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/3_4/>
+    a geo:Feature ;
+    rdfs:label "Sea of Azov"@en ;
+    dcterms:identifier "SDN:C19::3_4"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((34.3654688095203 47.4935656927287, 39.610456468937 47.4935656927287, 39.610456468937 44.6708168239739, 34.3654688095203 44.6708168239739, 34.3654688095203 47.4935656927287))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/4/>
+    a geo:Feature ;
+    rdfs:label "South Atlantic Ocean"@en ;
+    dcterms:identifier "SDN:C19::4"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-69.5851449919308 0, -20 0, -20 -60, -69.5851449919308 -60, -69.5851449919308 0))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/4_1/>
+    a geo:Feature ;
+    rdfs:label "Rio de la Plata"@en ;
+    dcterms:identifier "SDN:C19::4_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-59.4981406904015 -32.9974567322245, -54.9346082174543 -32.9974567322245, -54.9346082174543 -36.8969582804012, -59.4981406904015 -36.8969582804012, -59.4981406904015 -32.9974567322245))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/4_2/>
+    a geo:Feature ;
+    rdfs:label "Scotia Sea"@en ;
+    dcterms:identifier "SDN:C19::4_2"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-63.7443158620076 -51.7754106846832, -26.1704163077352 -51.7754106846832, -26.1704163077352 -62.1024934499247, -63.7443158620076 -62.1024934499247, -63.7443158620076 -51.7754106846832))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/4_3/>
+    a geo:Feature ;
+    rdfs:label "Drake Passage"@en ;
+    dcterms:identifier "SDN:C19::4_3"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-71.073240367123 -52.213373285822, -53.9593119132154 -52.213373285822, -53.9593119132154 -66.5157037849029, -71.073240367123 -66.5157037849029, -71.073240367123 -52.213373285822))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/5/>
+    a geo:Feature ;
+    rdfs:label "Indian Ocean"@en ;
+    dcterms:identifier "SDN:C19::5"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((20 30.514429, 146.836197 30.514429, 146.836197 -60, 20 -60, 20 30.514429))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/5_1/>
+    a geo:Feature ;
+    rdfs:label "Mozambique Channel"@en ;
+    dcterms:identifier "SDN:C19::5_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((32.585415099595 -8.51858256873434, 49.2679549305488 -8.51858256873434, 49.2679549305488 -29.5695982647357, 32.585415099595 -29.5695982647357, 32.585415099595 -8.51858256873434))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/5_10/>
+    a geo:Feature ;
+    rdfs:label "Lakshadweep Sea"@en ;
+    dcterms:identifier "SDN:C19::5_10"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((65.9851458521642 15.0472892876768, 81.2018846691431 15.0472892876768, 81.2018846691431 -0.708062712865171, 65.9851458521642 -0.708062712865171, 65.9851458521642 15.0472892876768))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/5_11/>
+    a geo:Feature ;
+    rdfs:label "Gulf of Mannar"@en ;
+    dcterms:identifier "SDN:C19::5_11"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((77.5366724695142 9.79627120424097, 80.1804631859726 9.79627120424097, 80.1804631859726 6.04744951078557, 77.5366724695142 6.04744951078557, 77.5366724695142 9.79627120424097))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/5_12/>
+    a geo:Feature ;
+    rdfs:label "Palk Strait and Palk Bay"@en ;
+    dcterms:identifier "SDN:C19::5_12"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((78.8326849293152 10.5312411787528, 80.61933301335 10.5312411787528, 80.61933301335 8.77659568336011, 78.8326849293152 8.77659568336011, 78.8326849293152 10.5312411787528))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/5_13/>
+    a geo:Feature ;
+    rdfs:label "Bay of Bengal"@en ;
+    dcterms:identifier "SDN:C19::5_13"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((79.3627421954954 22.9023032194777, 95.0262923348768 22.9023032194777, 95.0262923348768 5.21125443629656, 79.3627421954954 5.21125443629656, 79.3627421954954 22.9023032194777))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/5_14/>
+    a geo:Feature ;
+    rdfs:label "Andaman Sea"@en ;
+    dcterms:identifier "SDN:C19::5_14"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((90.9242105392594 17.6611493494069, 100.493960084525 17.6611493494069, 100.493960084525 4.30460869277941, 90.9242105392594 4.30460869277941, 90.9242105392594 17.6611493494069))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/5_15/>
+    a geo:Feature ;
+    rdfs:label "Timor Sea"@en ;
+    dcterms:identifier "SDN:C19::5_15"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((122.8390052196 -5.71791833316229, 133.636795926746 -5.71791833316229, 133.636795926746 -16.5221474775617, 122.8390052196 -16.5221474775617, 122.8390052196 -5.71791833316229))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/5_15_1/>
+    a geo:Feature ;
+    rdfs:label "Joseph Bonaparte Gulf"@en ;
+    dcterms:identifier "SDN:C19::5_15_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((127.354805 -13.906154, 129.998825 -13.906154, 129.998825 -15.516981, 127.354805 -15.516981, 127.354805 -13.906154))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/5_16/>
+    a geo:Feature ;
+    rdfs:label "Arafura Sea"@en ;
+    dcterms:identifier "SDN:C19::5_16"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((130.117653868569 -8.34886544527689, 142.307780963383 -8.34886544527689, 142.307780963383 -17.8447217530259, 130.117653868569 -17.8447217530259, 130.117653868569 -8.34886544527689))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/5_16_1/>
+    a geo:Feature ;
+    rdfs:label "Gulf of Carpentaria"@en ;
+    dcterms:identifier "SDN:C19::5_16_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((135.339935 -10.983482, 142.163651 -10.983482, 142.163651 -17.727114, 135.339935 -17.727114, 135.339935 -10.983482))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/5_17/>
+    a geo:Feature ;
+    rdfs:label "Great Australian Bight"@en ;
+    dcterms:identifier "SDN:C19::5_17"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((123.526547741705 -30.8310307634451, 136.223172969346 -30.8310307634451, 136.223172969346 -35.0080335879608, 123.526547741705 -35.0080335879608, 123.526547741705 -30.8310307634451))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/5_2/>
+    a geo:Feature ;
+    rdfs:label "Gulf of Suez"@en ;
+    dcterms:identifier "SDN:C19::5_2"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((32.0072011347674 29.9885549359133, 34.3033179932156 29.9885549359133, 34.3033179932156 27.2486975409505, 32.0072011347674 27.2486975409505, 32.0072011347674 29.9885549359133))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/5_3/>
+    a geo:Feature ;
+    rdfs:label "Gulf of Aqaba"@en ;
+    dcterms:identifier "SDN:C19::5_3"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((34.2842526714997 29.5907402733907, 35.1289450936991 29.5907402733907, 35.1289450936991 27.8435071763474, 34.2842526714997 27.8435071763474, 34.2842526714997 29.5907402733907))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/5_4/>
+    a geo:Feature ;
+    rdfs:label "Red Sea"@en ;
+    dcterms:identifier "SDN:C19::5_4"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((32.5739687301506 28.6457793509993, 44.7905010028198 28.6457793509993, 44.7905010028198 11.5666594258734, 32.5739687301506 11.5666594258734, 32.5739687301506 28.6457793509993))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/5_5/>
+    a geo:Feature ;
+    rdfs:label "Gulf of Aden"@en ;
+    dcterms:identifier "SDN:C19::5_5"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((42.26503744617 15.6322418121973, 53.2705315416208 15.6322418121973, 53.2705315416208 9.17739225049987, 42.26503744617 9.17739225049987, 42.26503744617 15.6322418121973))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/5_6/>
+    a geo:Feature ;
+    rdfs:label "Persian Gulf"@en ;
+    dcterms:identifier "SDN:C19::5_6"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((46.3238479179745 31.1382585152161, 56.0998414556729 31.1382585152161, 56.0998414556729 22.6395374648472, 46.3238479179745 22.6395374648472, 46.3238479179745 31.1382585152161))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/5_7/>
+    a geo:Feature ;
+    rdfs:label "Strait of Hormuz"@en ;
+    dcterms:identifier "SDN:C19::5_7"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((55.1647183406371 27.3713372504443, 57.341931925878 27.3713372504443, 57.341931925878 25.2732354779348, 55.1647183406371 25.2732354779348, 55.1647183406371 27.3713372504443))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/5_8/>
+    a geo:Feature ;
+    rdfs:label "Gulf of Oman"@en ;
+    dcterms:identifier "SDN:C19::5_8"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((55.9417575874488 25.961296066702, 61.8113870513681 25.961296066702, 61.8113870513681 22.3063906931805, 55.9417575874488 22.3063906931805, 55.9417575874488 25.961296066702))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/5_9/>
+    a geo:Feature ;
+    rdfs:label "Arabian Sea"@en ;
+    dcterms:identifier "SDN:C19::5_9"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((49.6706192647006 29.4242486350607, 82.3578480900486 29.4242486350607, 82.3578480900486 -0.700931, 49.6706192647006 -0.700931, 49.6706192647006 29.4242486350607))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6/>
+    a geo:Feature ;
+    rdfs:label "South China and Eastern Archipelagic Seas"@en ;
+    dcterms:identifier "SDN:C19::6"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((92.9105818045231 27.9848067177262, 141.025043867565 27.9848067177262, 141.025043867565 -24.7080880685535, 92.9105818045231 -24.7080880685535, 92.9105818045231 27.9848067177262))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_1/>
+    a geo:Feature ;
+    rdfs:label "South China Sea"@en ;
+    dcterms:identifier "SDN:C19::6_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((100.771867012287 26.2223207273943, 123.877378855162 26.2223207273943, 123.877378855162 -2.73905790728772, 100.771867012287 -2.73905790728772, 100.771867012287 26.2223207273943))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_10/>
+    a geo:Feature ;
+    rdfs:label "Bali Sea"@en ;
+    dcterms:identifier "SDN:C19::6_10"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((114.300221212892 -7.24264320269212, 117.289329690823 -7.24264320269212, 117.289329690823 -9.07390790924946, 114.300221212892 -9.07390790924946, 114.300221212892 -7.24264320269212))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_11/>
+    a geo:Feature ;
+    rdfs:label "Flores Sea"@en ;
+    dcterms:identifier "SDN:C19::6_11"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((117.092420288714 -5.44933660069229, 122.953003508129 -5.44933660069229, 122.953003508129 -8.76447114615199, 117.092420288714 -8.76447114615199, 117.092420288714 -5.44933660069229))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_12/>
+    a geo:Feature ;
+    rdfs:label "Selat Sumba"@en ;
+    dcterms:identifier "SDN:C19::6_12"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((118.41457381962 -8.17216788246026, 120.036618015586 -8.17216788246026, 120.036618015586 -9.60433978647311, 118.41457381962 -9.60433978647311, 118.41457381962 -8.17216788246026))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_13/>
+    a geo:Feature ;
+    rdfs:label "Sawu Sea"@en ;
+    dcterms:identifier "SDN:C19::6_13"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((119.867617004181 -7.988678261658, 125.486868357016 -7.988678261658, 125.486868357016 -11.3432764680467, 119.867617004181 -11.3432764680467, 119.867617004181 -7.988678261658))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_14/>
+    a geo:Feature ;
+    rdfs:label "Aru Sea"@en ;
+    dcterms:identifier "SDN:C19::6_14"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((130.769180930589 -2.7130038768018, 141.45030605158 -2.7130038768018, 141.45030605158 -9.12362354081155, 130.769180930589 -9.12362354081155, 130.769180930589 -2.7130038768018))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_15/>
+    a geo:Feature ;
+    rdfs:label "Banda Sea"@en ;
+    dcterms:identifier "SDN:C19::6_15"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((119.398053660818 -0.368901803563759, 133.394467077409 -0.368901803563759, 133.394467077409 -11.2278041325081, 119.398053660818 -11.2278041325081, 119.398053660818 -0.368901803563759))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_16/>
+    a geo:Feature ;
+    rdfs:label "Teluk Bone"@en ;
+    dcterms:identifier "SDN:C19::6_16"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((119.479944206676 -2.51357420036628, 121.985296114825 -2.51357420036628, 121.985296114825 -5.63292367213738, 119.479944206676 -5.63292367213738, 119.479944206676 -2.51357420036628))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_17/>
+    a geo:Feature ;
+    rdfs:label "Ceram Sea"@en ;
+    dcterms:identifier "SDN:C19::6_17"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((125.598649878784 0.150620411139706, 134.254121913767 0.150620411139706, 134.254121913767 -5.32312677786817, 125.598649878784 -5.32312677786817, 125.598649878784 0.150620411139706))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_18/>
+    a geo:Feature ;
+    rdfs:label "Teluk Berau"@en ;
+    dcterms:identifier "SDN:C19::6_18"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((131.947436826738 -2.07452266096637, 133.999296500966 -2.07452266096637, 133.999296500966 -2.81217517130326, 131.947436826738 -2.81217517130326, 131.947436826738 -2.07452266096637))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_19/>
+    a geo:Feature ;
+    rdfs:label "Halmahera Sea"@en ;
+    dcterms:identifier "SDN:C19::6_19"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((127.220357997279 2.7076395093361, 131.341641840783 2.7076395093361, 131.341641840783 -1.73516689810897, 127.220357997279 -1.73516689810897, 127.220357997279 2.7076395093361))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_2/>
+    a geo:Feature ;
+    rdfs:label "Gulf of Tonkin"@en ;
+    dcterms:identifier "SDN:C19::6_2"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((104.900421511307 22.9370013000345, 110.551805681133 22.9370013000345, 110.551805681133 16.8169824593751, 104.900421511307 16.8169824593751, 104.900421511307 22.9370013000345))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_20/>
+    a geo:Feature ;
+    rdfs:label "Molucca Sea"@en ;
+    dcterms:identifier "SDN:C19::6_20"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((122.473617627874 4.68350934283018, 130.320954970543 4.68350934283018, 130.320954970543 -3.63904584373562, 122.473617627874 -3.63904584373562, 122.473617627874 4.68350934283018))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_21/>
+    a geo:Feature ;
+    rdfs:label "Teluk Tomini"@en ;
+    dcterms:identifier "SDN:C19::6_21"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((119.990090223995 0.581014074151739, 123.428127797757 0.581014074151739, 123.428127797757 -1.4499896058999, 119.990090223995 -1.4499896058999, 119.990090223995 0.581014074151739))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_22/>
+    a geo:Feature ;
+    rdfs:label "Celebes Sea"@en ;
+    dcterms:identifier "SDN:C19::6_22"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((116.541713113163 8.49426292254442, 127.294327640925 8.49426292254442, 127.294327640925 -1.67177841570567, 116.541713113163 -1.67177841570567, 116.541713113163 8.49426292254442))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_23/>
+    a geo:Feature ;
+    rdfs:label "Sulu Sea"@en ;
+    dcterms:identifier "SDN:C19::6_23"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((116.112489734889 13.4994563862455, 124.729288059513 13.4994563862455, 124.729288059513 4.03874442354706, 116.112489734889 4.03874442354706, 116.112489734889 13.4994563862455))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_3/>
+    a geo:Feature ;
+    rdfs:label "Gulf of Thailand"@en ;
+    dcterms:identifier "SDN:C19::6_3"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((97.090460345075 14.026482164517, 105.803160246771 14.026482164517, 105.803160246771 5.46790344161229, 97.090460345075 5.46790344161229, 97.090460345075 14.026482164517))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_4/>
+    a geo:Feature ;
+    rdfs:label "Natuna Sea"@en ;
+    dcterms:identifier "SDN:C19::6_4"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((102.247652726473 4.79927918271456, 112.430665004075 4.79927918271456, 112.430665004075 -5.54616962043986, 102.247652726473 -5.54616962043986, 102.247652726473 4.79927918271456))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_5/>
+    a geo:Feature ;
+    rdfs:label "Malacca Strait"@en ;
+    dcterms:identifier "SDN:C19::6_5"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((97.495743 8.40871, 103.516548 8.40871, 103.516548 0.731919, 97.495743 0.731919, 97.495743 8.40871))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_6/>
+    a geo:Feature ;
+    rdfs:label "Singapore Strait"@en ;
+    dcterms:identifier "SDN:C19::6_6"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((103.346974056345 1.39362828929764, 104.577681950966 1.39362828929764, 104.577681950966 1.07866094485802, 103.346974056345 1.07866094485802, 103.346974056345 1.39362828929764))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_7/>
+    a geo:Feature ;
+    rdfs:label "Selat Sunda"@en ;
+    dcterms:identifier "SDN:C19::6_7"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((104.134738267898 -5.13550039871465, 106.122711201134 -5.13550039871465, 106.122711201134 -6.99195423936042, 104.134738267898 -6.99195423936042, 104.134738267898 -5.13550039871465))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_8/>
+    a geo:Feature ;
+    rdfs:label "Jawa Sea"@en ;
+    dcterms:identifier "SDN:C19::6_8"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((105.281620236582 -1.50026294487676, 119.726058953914 -1.50026294487676, 119.726058953914 -8.94712459678621, 105.281620236582 -8.94712459678621, 105.281620236582 -1.50026294487676))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/6_9/>
+    a geo:Feature ;
+    rdfs:label "Selat Makasar"@en ;
+    dcterms:identifier "SDN:C19::6_9"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((115.55137300542 2.11654362105655, 120.87057083022 2.11654362105655, 120.87057083022 -5.60876594532539, 115.55137300542 -5.60876594532539, 115.55137300542 2.11654362105655))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/7/>
+    a geo:Feature ;
+    rdfs:label "North Pacific Ocean"@en ;
+    dcterms:identifier "SDN:C19::7"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((116.8 66.376240858059, -77.016667 66.376240858059, -77.016667 0, 116.8 0, 116.8 66.376240858059))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/7_1/>
+    a geo:Feature ;
+    rdfs:label "Philippine Sea"@en ;
+    dcterms:identifier "SDN:C19::7_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((113.731703688505 37.0672292277703, 150.705204799097 37.0672292277703, 150.705204799097 17.4297527362186, 113.731703688505 17.4297527362186, 113.731703688505 37.0672292277703))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/7_10/>
+    a geo:Feature ;
+    rdfs:label "Gulf of Alaska"@en ;
+    dcterms:identifier "SDN:C19::7_10"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-163.262459769239 63.3307425539565, -136.664792472629 63.3307425539565, -136.664792472629 54.1881399278255, -163.262459769239 54.1881399278255, -163.262459769239 63.3307425539565))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/7_11/>
+    a geo:Feature ;
+    rdfs:label "Coastal Waters of Southeast Alaska and British Columbia"@en ;
+    dcterms:identifier "SDN:C19::7_11"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-130.6014826183 53.7645697629726, -129.699205322649 53.7645697629726, -129.699205322649 53.0745554168671, -130.6014826183 53.0745554168671, -130.6014826183 53.7645697629726))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/7_12/>
+    a geo:Feature ;
+    rdfs:label "Gulf of California"@en ;
+    dcterms:identifier "SDN:C19::7_12"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-116.450575748418 32.5103600062447, -109.00323769749 32.5103600062447, -109.00323769749 21.8035739912184, -116.450575748418 21.8035739912184, -116.450575748418 32.5103600062447))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/7_13/>
+    a geo:Feature ;
+    rdfs:label "Gulf of Panama"@en ;
+    dcterms:identifier "SDN:C19::7_13"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-80.5417441733671 9.09836466062189, -77.9273410199528 9.09836466062189, -77.9273410199528 7.44472008945169, -80.5417441733671 7.44472008945169, -80.5417441733671 9.09836466062189))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/7_2/>
+    a geo:Feature ;
+    rdfs:label "Tai-Wan Strait"@en ;
+    dcterms:identifier "SDN:C19::7_2"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((116.667409842909 26.2997714580797, 121.532617513172 26.2997714580797, 121.532617513172 21.9574410648976, 116.667409842909 21.9574410648976, 116.667409842909 26.2997714580797))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/7_3/>
+    a geo:Feature ;
+    rdfs:label "East China Sea"@en ;
+    dcterms:identifier "SDN:C19::7_3"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((118.333741329208 34.2104764694132, 132.28249261362 34.2104764694132, 132.28249261362 23.2747772415465, 118.333741329208 23.2747772415465, 118.333741329208 34.2104764694132))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/7_4/>
+    a geo:Feature ;
+    rdfs:label "Yellow Sea"@en ;
+    dcterms:identifier "SDN:C19::7_4"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((117.262134545853 42.4690167248622, 128.302759360691 42.4690167248622, 128.302759360691 31.0208677157962, 117.262134545853 31.0208677157962, 117.262134545853 42.4690167248622))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/7_4_1/>
+    a geo:Feature ;
+    rdfs:label "Bo Hai"@en ;
+    dcterms:identifier "SDN:C19::7_4_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((117.292249289056 41.3312214295071, 121.943472670931 41.3312214295071, 121.943472670931 36.6196393207904, 117.292249289056 36.6196393207904, 117.292249289056 41.3312214295071))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/7_4_2/>
+    a geo:Feature ;
+    rdfs:label "Liaodong Wan"@en ;
+    dcterms:identifier "SDN:C19::7_4_2"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((120.43468067691 41.4316943748856, 122.482505348718 41.4316943748856, 122.482505348718 39.3801379836294, 120.43468067691 39.3801379836294, 120.43468067691 41.4316943748856))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/7_5/>
+    a geo:Feature ;
+    rdfs:label "Seto Naikai"@en ;
+    dcterms:identifier "SDN:C19::7_5"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((130.702851934817 34.99017986405, 135.595955458498 34.99017986405, 135.595955458498 33.0577809051258, 130.702851934817 33.0577809051258, 130.702851934817 34.99017986405))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/7_6/>
+    a geo:Feature ;
+    rdfs:label "Japan Sea"@en ;
+    dcterms:identifier "SDN:C19::7_6"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((123.470855886299 52.1557097295288, 147.534399730842 52.1557097295288, 147.534399730842 29.4555880809204, 123.470855886299 29.4555880809204, 123.470855886299 52.1557097295288))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/7_6_1/>
+    a geo:Feature ;
+    rdfs:label "Tatarskiy Proliv"@en ;
+    dcterms:identifier "SDN:C19::7_6_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((137.675704105809 52.0917541250523, 144.263134456879 52.0917541250523, 144.263134456879 44.0997852961218, 137.675704105809 44.0997852961218, 137.675704105809 52.0917541250523))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/7_7/>
+    a geo:Feature ;
+    rdfs:label "Sea of Okhotsk"@en ;
+    dcterms:identifier "SDN:C19::7_7"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((135.142963523175 70.3502640043672, 168.606727357475 70.3502640043672, 168.606727357475 41.583344326003, 135.142963523175 41.583344326003, 135.142963523175 70.3502640043672))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/7_8/>
+    a geo:Feature ;
+    rdfs:label "Bering Sea"@en ;
+    dcterms:identifier "SDN:C19::7_8"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((161.890851974456 67.1101923231635, -156.116215066991 67.1101923231635, -156.116215066991 50.6774520123085, 161.890851974456 50.6774520123085, 161.890851974456 67.1101923231635))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/7_8_1/>
+    a geo:Feature ;
+    rdfs:label "Anadyrskiy Zaliv"@en ;
+    dcterms:identifier "SDN:C19::7_8_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((175.13756282136 67.6863744707555, -173.086937930368 67.6863744707555, -173.086937930368 62.4989452176343, 175.13756282136 62.4989452176343, 175.13756282136 67.6863744707555))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/7_9/>
+    a geo:Feature ;
+    rdfs:label "Bering Strait"@en ;
+    dcterms:identifier "SDN:C19::7_9"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-173.267942344732 66.536679037956, -165.991519318924 66.536679037956, -165.991519318924 64.2324092388718, -173.267942344732 64.2324092388718, -173.267942344732 66.536679037956))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/8/>
+    a geo:Feature ;
+    rdfs:label "South Pacific Ocean"@en ;
+    dcterms:identifier "SDN:C19::8"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((131.023611 3.50171899829913, -37.266667 3.50171899829913, -37.266667 -60, 131.023611 -60, 131.023611 3.50171899829913))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/8_1/>
+    a geo:Feature ;
+    rdfs:label "Bismarck Sea"@en ;
+    dcterms:identifier "SDN:C19::8_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((141.974833208611 1.65110480245717, 153.063432883968 1.65110480245717, 153.063432883968 -8.26920848963312, 141.974833208611 -8.26920848963312, 141.974833208611 1.65110480245717))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/8_2/>
+    a geo:Feature ;
+    rdfs:label "Solomon Sea"@en ;
+    dcterms:identifier "SDN:C19::8_2"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((146.080156952474 -2.14640851887479, 163.016850789944 -2.14640851887479, 163.016850789944 -15.8619878200504, 146.080156952474 -15.8619878200504, 146.080156952474 -2.14640851887479))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/8_3/>
+    a geo:Feature ;
+    rdfs:label "Coral Sea"@en ;
+    dcterms:identifier "SDN:C19::8_3"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((138.97761439766 -7.02978112750233, 171.194504693012 -7.02978112750233, 171.194504693012 -28.4948736843239, 138.97761439766 -28.4948736843239, 138.97761439766 -7.02978112750233))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/8_3_1/>
+    a geo:Feature ;
+    rdfs:label "Torres Strait"@en ;
+    dcterms:identifier "SDN:C19::8_3_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((141.024537090385 -8.96700050724863, 144.305725388571 -8.96700050724863, 144.305725388571 -11.0330431845381, 141.024537090385 -11.0330431845381, 141.024537090385 -8.96700050724863))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/8_3_2/>
+    a geo:Feature ;
+    rdfs:label "Great Barrier Reef (Coastal Waters)"@en ;
+    dcterms:identifier "SDN:C19::8_3_2"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((140.764949311531 -10.0448677054646, 153.96312983259 -10.0448677054646, 153.96312983259 -25.184932818766, 140.764949311531 -25.184932818766, 140.764949311531 -10.0448677054646))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/8_3_3/>
+    a geo:Feature ;
+    rdfs:label "Gulf of Papua"@en ;
+    dcterms:identifier "SDN:C19::8_3_3"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((142.16263038116 -7.2946654018966, 146.620595596684 -7.2946654018966, 146.620595596684 -9.22173622032206, 142.16263038116 -9.22173622032206, 142.16263038116 -7.2946654018966))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/8_4_/>
+    a geo:Feature ;
+    rdfs:label "Tasman Sea"@en ;
+    dcterms:identifier "SDN:C19::8_4_"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((142.925604745902 -22.2322113553389, 177.531438559592 -22.2322113553389, 177.531438559592 -39.5795808651075, 142.925604745902 -39.5795808651075, 142.925604745902 -22.2322113553389))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/8_4_1/>
+    a geo:Feature ;
+    rdfs:label "Bass Strait"@en ;
+    dcterms:identifier "SDN:C19::8_4_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((143.445534251324 -37.4714944836226, 150.222413781815 -37.4714944836226, 150.222413781815 -41.4741130842593, 143.445534251324 -41.4741130842593, 143.445534251324 -37.4714944836226))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/9/>
+    a geo:Feature ;
+    rdfs:label "Arctic Ocean"@en ;
+    dcterms:identifier "SDN:C19::9"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-180 90, 180 90, 180 51.1325881619914, -180 51.1325881619914, -180 90))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/9_1/>
+    a geo:Feature ;
+    rdfs:label "East Siberian Sea"@en ;
+    dcterms:identifier "SDN:C19::9_1"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((138.401622654881 79.0000019038462, 180 79.0000019038462, 180 67.7983955527279, 138.401622654881 67.7983955527279, 138.401622654881 79.0000019038462))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/9_10/>
+    a geo:Feature ;
+    rdfs:label "Hudson Strait"@en ;
+    dcterms:identifier "SDN:C19::9_10"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-81.2196970933966 67.0681088251723, -64.1241797267053 67.0681088251723, -64.1241797267053 56.8888137415289, -81.2196970933966 56.8888137415289, -81.2196970933966 67.0681088251723))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/9_11/>
+    a geo:Feature ;
+    rdfs:label "Hudson Bay"@en ;
+    dcterms:identifier "SDN:C19::9_11"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-96.4283592167597 68.8685636216564, -74.3542682536276 68.8685636216564, -74.3542682536276 50.5696481941912, -96.4283592167597 50.5696481941912, -96.4283592167597 68.8685636216564))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/9_12/>
+    a geo:Feature ;
+    rdfs:label "Baffin Bay"@en ;
+    dcterms:identifier "SDN:C19::9_12"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-82.3191087286796 82.6897946359146, -50.5109427891718 82.6897946359146, -50.5109427891718 69.3659065441337, -82.3191087286796 69.3659065441337, -82.3191087286796 82.6897946359146))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/9_13/>
+    a geo:Feature ;
+    rdfs:label "Lincoln Sea"@en ;
+    dcterms:identifier "SDN:C19::9_13"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-70.2604288072753 83.5640515427932, -37.5152791129501 83.5640515427932, -37.5152791129501 81.3269822915305, -70.2604288072753 81.3269822915305, -70.2604288072753 83.5640515427932))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/9_14/>
+    a geo:Feature ;
+    rdfs:label "Northwestern Passages"@en ;
+    dcterms:identifier "SDN:C19::9_14"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-128.144719850504 82.409608130299, -71.7715890135922 82.409608130299, -71.7715890135922 63.5995106484367, -128.144719850504 63.5995106484367, -128.144719850504 82.409608130299))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/9_15/>
+    a geo:Feature ;
+    rdfs:label "Beaufort Sea"@en ;
+    dcterms:identifier "SDN:C19::9_15"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-156.645774838244 76.348429003534, -121.763081381975 76.348429003534, -121.763081381975 65.6130664819046, -156.645774838244 65.6130664819046, -156.645774838244 76.348429003534))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/9_16/>
+    a geo:Feature ;
+    rdfs:label "Chukchi Sea"@en ;
+    dcterms:identifier "SDN:C19::9_16"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((177.493486404419 71.6078495972615, -156.526019417522 71.6078495972615, -156.526019417522 65.9080374652434, 177.493486404419 65.9080374652434, 177.493486404419 71.6078495972615))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/9_2/>
+    a geo:Feature ;
+    rdfs:label "Laptev Sea"@en ;
+    dcterms:identifier "SDN:C19::9_2"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((95.2333358094057 81.2788944213394, 141.63867408902 81.2788944213394, 141.63867408902 70.162908594833, 95.2333358094057 70.162908594833, 95.2333358094057 81.2788944213394))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/9_3/>
+    a geo:Feature ;
+    rdfs:label "Kara Sea"@en ;
+    dcterms:identifier "SDN:C19::9_3"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((53.8187152298353 81.3699065017207, 106.071492680497 81.3699065017207, 106.071492680497 66.0375447387754, 53.8187152298353 66.0375447387754, 53.8187152298353 81.3699065017207))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/9_4/>
+    a geo:Feature ;
+    rdfs:label "Barents Sea"@en ;
+    dcterms:identifier "SDN:C19::9_4"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((16.2694762982728 82.2514153220693, 68.9755338269347 82.2514153220693, 68.9755338269347 65.5666560048002, 16.2694762982728 65.5666560048002, 16.2694762982728 82.2514153220693))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/9_5/>
+    a geo:Feature ;
+    rdfs:label "White Sea"@en ;
+    dcterms:identifier "SDN:C19::9_5"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((31.8685356938203 68.7989569132796, 44.8394373774493 68.7989569132796, 44.8394373774493 63.1090416470606, 31.8685356938203 63.1090416470606, 31.8685356938203 68.7989569132796))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/9_6/>
+    a geo:Feature ;
+    rdfs:label "Greenland Sea"@en ;
+    dcterms:identifier "SDN:C19::9_6"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-36.8873951742225 84.0988786741383, 17.535040165038 84.0988786741383, 17.535040165038 69.7856946623911, -36.8873951742225 69.7856946623911, -36.8873951742225 84.0988786741383))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/9_7/>
+    a geo:Feature ;
+    rdfs:label "Norwegian Sea"@en ;
+    dcterms:identifier "SDN:C19::9_7"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-9.02068831025837 78.1219500577069, 27.0790684243223 78.1219500577069, 27.0790684243223 57.9767651784406, -9.02068831025837 57.9767651784406, -9.02068831025837 78.1219500577069))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/9_8/>
+    a geo:Feature ;
+    rdfs:label "Iceland Sea"@en ;
+    dcterms:identifier "SDN:C19::9_8"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-33.0122766941186 74.7432353466058, -4.90382728856863 74.7432353466058, -4.90382728856863 62.3430537642984, -33.0122766941186 62.3430537642984, -33.0122766941186 74.7432353466058))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/9_9/>
+    a geo:Feature ;
+    rdfs:label "Davis Strait"@en ;
+    dcterms:identifier "SDN:C19::9_9"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-70.0645366140773 70.1242619883246, -44.46286529996 70.1242619883246, -44.46286529996 59.8629371408421, -70.0645366140773 59.8629371408421, -70.0645366140773 70.1242619883246))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/FRAM/>
+    a geo:Feature ;
+    rdfs:label "Fram Strait"@en ;
+    dcterms:identifier "SDN:C19::FRAM"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-9.76400148921 81.4523562429474, 16.6184257263662 81.4523562429474, 16.6184257263662 76.4421290395782, -9.76400148921 76.4421290395782, -9.76400148921 81.4523562429474))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/GTLAK001/>
+    a geo:Feature ;
+    rdfs:label "Laurentian Great Lakes"@en ;
+    dcterms:identifier "SDN:C19::GTLAK001"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-93.3673599420168 50.4305743873425, -75.3266746209 50.4305743873425, -75.3266746209 38.0650875438909, -93.3673599420168 38.0650875438909, -93.3673599420168 50.4305743873425))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/GTLAK007/>
+    a geo:Feature ;
+    rdfs:label "Lake St. Clair"@en ;
+    dcterms:identifier "SDN:C19::GTLAK007"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-82.9246262136711 42.6922613977074, -82.3643160285093 42.6922613977074, -82.3643160285093 42.2800700881497, -82.9246262136711 42.2800700881497, -82.9246262136711 42.6922613977074))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/GTLAK008/>
+    a geo:Feature ;
+    rdfs:label "St. Clair River"@en ;
+    dcterms:identifier "SDN:C19::GTLAK008"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-82.7452479856777 43.0058203528621, -82.3611635811113 43.0058203528621, -82.3611635811113 42.4599655143702, -82.7452479856777 42.4599655143702, -82.7452479856777 43.0058203528621))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/GTLAK009/>
+    a geo:Feature ;
+    rdfs:label "St. Marys River"@en ;
+    dcterms:identifier "SDN:C19::GTLAK009"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-84.6713455387076 46.7724020374267, -83.6814476721383 46.7724020374267, -83.6814476721383 45.9662463967102, -84.6713455387076 45.9662463967102, -84.6713455387076 46.7724020374267))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/GTLAK010/>
+    a geo:Feature ;
+    rdfs:label "Detroit River"@en ;
+    dcterms:identifier "SDN:C19::GTLAK010"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-83.2929646575325 42.4549278584324, -82.9049906807527 42.4549278584324, -82.9049906807527 42.011142729081, -83.2929646575325 42.011142729081, -83.2929646575325 42.4549278584324))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/GTLAK011/>
+    a geo:Feature ;
+    rdfs:label "Niagara River"@en ;
+    dcterms:identifier "SDN:C19::GTLAK011"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-79.179210313307 43.2721131133333, -78.8223102967749 43.2721131133333, -78.8223102967749 42.8688009568282, -79.179210313307 42.8688009568282, -79.179210313307 43.2721131133333))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/GTLAK012/>
+    a geo:Feature ;
+    rdfs:label "St. Louis River Estuary"@en ;
+    dcterms:identifier "SDN:C19::GTLAK012"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-92.3134745124358 46.8101016100188, -91.9725208494508 46.8101016100188, -91.9725208494508 46.5895025508906, -92.3134745124358 46.5895025508906, -92.3134745124358 46.8101016100188))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/GTLAK013/>
+    a geo:Feature ;
+    rdfs:label "Keweenaw Bay"@en ;
+    dcterms:identifier "SDN:C19::GTLAK013"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-88.6004939924268 47.1374431432881, -88.1437061953303 47.1374431432881, -88.1437061953303 46.7340380168069, -88.6004939924268 46.7340380168069, -88.6004939924268 47.1374431432881))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/GTLAK014/>
+    a geo:Feature ;
+    rdfs:label "Whitefish Bay"@en ;
+    dcterms:identifier "SDN:C19::GTLAK014"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-85.1484284495157 46.8355462115691, -84.3885083180376 46.8355462115691, -84.3885083180376 46.4074625794366, -85.1484284495157 46.4074625794366, -85.1484284495157 46.8355462115691))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/GTLAK015/>
+    a geo:Feature ;
+    rdfs:label "Michipicoten Bay"@en ;
+    dcterms:identifier "SDN:C19::GTLAK015"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-85.3917467087752 48.2439829402484, -84.711757615711 48.2439829402484, -84.711757615711 47.5765385684067, -85.3917467087752 47.5765385684067, -85.3917467087752 48.2439829402484))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/GTLAK016/>
+    a geo:Feature ;
+    rdfs:label "Saginaw Bay"@en ;
+    dcterms:identifier "SDN:C19::GTLAK016"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-84.0938820457958 44.4538508644011, -83.0213932757932 44.4538508644011, -83.0213932757932 43.4988809354653, -84.0938820457958 43.4988809354653, -84.0938820457958 44.4538508644011))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/GTLAK017/>
+    a geo:Feature ;
+    rdfs:label "Georgian Bay"@en ;
+    dcterms:identifier "SDN:C19::GTLAK017"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-82.021202972716 46.5601014148559, -79.495462491498 46.5601014148559, -79.495462491498 43.9321107194733, -82.021202972716 43.9321107194733, -82.021202972716 46.5601014148559))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/GTLAK018/>
+    a geo:Feature ;
+    rdfs:label "Green Bay"@en ;
+    dcterms:identifier "SDN:C19::GTLAK018"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-88.1805536987595 45.6336548900092, -86.9208321497815 45.6336548900092, -86.9208321497815 44.3712539063007, -88.1805536987595 44.3712539063007, -88.1805536987595 45.6336548900092))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/GTLAK019/>
+    a geo:Feature ;
+    rdfs:label "Grand Traverse Bay"@en ;
+    dcterms:identifier "SDN:C19::GTLAK019"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-85.6938902323271 45.2996797277317, -85.3201182792917 45.2996797277317, -85.3201182792917 44.7227871415756, -85.6938902323271 44.7227871415756, -85.6938902323271 45.2996797277317))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/GTLAK020/>
+    a geo:Feature ;
+    rdfs:label "Little Bay de Noc"@en ;
+    dcterms:identifier "SDN:C19::GTLAK020"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-87.1440129007001 46.0048670003226, -86.917580159954 46.0048670003226, -86.917580159954 45.6775637069149, -87.1440129007001 45.6775637069149, -87.1440129007001 46.0048670003226))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/GTLAK021/>
+    a geo:Feature ;
+    rdfs:label "Big Bay de Noc"@en ;
+    dcterms:identifier "SDN:C19::GTLAK021"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-86.9760879588564 45.9820024584591, -86.4900314379759 45.9820024584591, -86.4900314379759 45.5649034248702, -86.9760879588564 45.5649034248702, -86.9760879588564 45.9820024584591))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/GTLAK022/>
+    a geo:Feature ;
+    rdfs:label "Sandusky Bay"@en ;
+    dcterms:identifier "SDN:C19::GTLAK022"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-83.0741215997275 41.5169558792747, -82.6242013297396 41.5169558792747, -82.6242013297396 41.4165576175302, -83.0741215997275 41.4165576175302, -83.0741215997275 41.5169558792747))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/GTLAK023/>
+    a geo:Feature ;
+    rdfs:label "Long Point Bay"@en ;
+    dcterms:identifier "SDN:C19::GTLAK023"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-80.4567134150437 42.8032053087439, -80.0434534137597 42.8032053087439, -80.0434534137597 42.5438507975899, -80.4567134150437 42.5438507975899, -80.4567134150437 42.8032053087439))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/GTLAK024/>
+    a geo:Feature ;
+    rdfs:label "Bay of Quinte"@en ;
+    dcterms:identifier "SDN:C19::GTLAK024"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-77.6094204250911 44.1107564690072, -76.7935050867326 44.1107564690072, -76.7935050867326 43.9194033646119, -77.6094204250911 43.9194033646119, -77.6094204250911 44.1107564690072))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/GTLAK025/>
+    a geo:Feature ;
+    rdfs:label "Chequamegon Bay"@en ;
+    dcterms:identifier "SDN:C19::GTLAK025"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-90.9675408792393 46.7312103478466, -90.6821978984311 46.7312103478466, -90.6821978984311 46.5752301081079, -90.9675408792393 46.5752301081079, -90.9675408792393 46.7312103478466))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/IRM/>
+    a geo:Feature ;
+    rdfs:label "Irminger Sea"@en ;
+    dcterms:identifier "SDN:C19::IRM"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-45.8572 74.2241, -21.0859 74.2241, -21.0859 52.3194, -45.8572 52.3194, -45.8572 74.2241))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/NSL01/>
+    a geo:Feature ;
+    rdfs:label "Western Scheldt"@en ;
+    dcterms:identifier "SDN:C19::NSL01"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((3.546351 51.464513, 4.253288 51.464513, 4.253288 51.327511, 3.546351 51.327511, 3.546351 51.464513))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/NSL02/>
+    a geo:Feature ;
+    rdfs:label "Eastern Scheldt"@en ;
+    dcterms:identifier "SDN:C19::NSL02"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((3.546351 51.822408, 4.253288 51.822408, 4.253288 51.403094, 3.546351 51.403094, 3.546351 51.822408))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/NSL03/>
+    a geo:Feature ;
+    rdfs:label "Wadden Sea"@en ;
+    dcterms:identifier "SDN:C19::NSL03"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((4.451010 55.761223, 9.837974 55.761223, 9.837974 52.874095, 4.451010 52.874095, 4.451010 55.761223))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00001/>
+    a geo:Feature ;
+    rdfs:label "African freshwater bodies"@en ;
+    dcterms:identifier "SDN:C19::SVX00001"^^xsd:token ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00002/>
+    a geo:Feature ;
+    rdfs:label "Antarctic freshwater bodies"@en ;
+    dcterms:identifier "SDN:C19::SVX00002"^^xsd:token ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00003/>
+    a geo:Feature ;
+    rdfs:label "Aral Sea"@en ;
+    dcterms:identifier "SDN:C19::SVX00003"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((58.0 46.99975, 62.5 46.99975, 62.5 43.0, 58.0 43.0, 58.0 46.99975))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00004/>
+    a geo:Feature ;
+    rdfs:label "Asian mainland"@en ;
+    dcterms:identifier "SDN:C19::SVX00004"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((8.55336367557947 82.9181406725839, -168.865607669611 82.9181406725839, -168.865607669611 -22.9123332382075, 8.55336367557947 -22.9123332382075, 8.55336367557947 82.9181406725839))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00005/>
+    a geo:Feature ;
+    rdfs:label "Atlantic Ocean"@en ;
+    dcterms:identifier "SDN:C19::SVX00005"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-100.88107292377 66.7664772182701, 22.168904630175 66.7664772182701, 22.168904630175 -69.5400225350063, -100.88107292377 -69.5400225350063, -100.88107292377 66.7664772182701))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00006/>
+    a geo:Feature ;
+    rdfs:label "Australian freshwater bodies"@en ;
+    dcterms:identifier "SDN:C19::SVX00006"^^xsd:token ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00007/>
+    a geo:Feature ;
+    rdfs:label "Caspian Sea"@en ;
+    dcterms:identifier "SDN:C19::SVX00007"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((46.4996 47.5, 55.0 47.5, 55.0 36.5, 46.4996 36.5, 46.4996 47.5))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00008/>
+    a geo:Feature ;
+    rdfs:label "European mainland"@en ;
+    dcterms:identifier "SDN:C19::SVX00008"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-9.9397205555026 71.6807828234932, 67.9620933833754 71.6807828234932, 67.9620933833754 35.9472951304195, -9.9397205555026 35.9472951304195, -9.9397205555026 71.6807828234932))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00009/>
+    a geo:Feature ;
+    rdfs:label "Lake Erie"@en ;
+    dcterms:identifier "SDN:C19::SVX00009"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-83.6656431 43.40770536, -78.63477641 43.40770536, -78.63477641 40.95141031, -83.6656431 40.95141031, -83.6656431 43.40770536))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00010/>
+    a geo:Feature ;
+    rdfs:label "Lake Huron"@en ;
+    dcterms:identifier "SDN:C19::SVX00010"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-85.37542358 48.20296145, -79.49905027 48.20296145, -79.49905027 42.36058299, -85.37542358 42.36058299, -85.37542358 48.20296145))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00011/>
+    a geo:Feature ;
+    rdfs:label "Lake Michigan"@en ;
+    dcterms:identifier "SDN:C19::SVX00011"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-89.29404555 47.00565218, -84.6962558 47.00565218, -84.6962558 41.26611069, -89.29404555 41.26611069, -89.29404555 47.00565218))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00012/>
+    a geo:Feature ;
+    rdfs:label "Lake Ontario"@en ;
+    dcterms:identifier "SDN:C19::SVX00012"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-80.01261225 44.71688896, -75.32667302 44.71688896, -75.32667302 42.82457724, -80.01261225 42.82457724, -80.01261225 44.71688896))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00013/>
+    a geo:Feature ;
+    rdfs:label "Lake Superior"@en ;
+    dcterms:identifier "SDN:C19::SVX00013"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-92.14768148 49.14277507, -84.05785001 49.14277507, -84.05785001 46.32977967, -92.14768148 46.32977967, -92.14768148 49.14277507))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00014/>
+    a geo:Feature ;
+    rdfs:label "North America Mainland"@en ;
+    dcterms:identifier "SDN:C19::SVX00014"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-174.215 90.0, -51.03846 90.0, -51.03846 5.51761, -174.215 5.51761, -174.215 90.0))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00015/>
+    a geo:Feature ;
+    rdfs:label "Northeast Atlantic Ocean (40W)"@en ;
+    dcterms:identifier "SDN:C19::SVX00015"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-41.2379280189409 68.0873543216418, 12.074649830972 68.0873543216418, 12.074649830972 -0.887808133893312, -41.2379280189409 -0.887808133893312, -41.2379280189409 68.0873543216418))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00016/>
+    a geo:Feature ;
+    rdfs:label "Northeast Pacific Ocean (180W)"@en ;
+    dcterms:identifier "SDN:C19::SVX00016"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-180 66.3759800595047, -77.0225501611931 66.3759800595047, -77.0225501611931 0, -180 0, -180 66.3759800595047))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00017/>
+    a geo:Feature ;
+    rdfs:label "Northwest Atlantic Ocean (40W)"@en ;
+    dcterms:identifier "SDN:C19::SVX00017"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-98.1619359692944 65.155855274362, -40 65.155855274362, -40 -0.373285122439995, -98.1619359692944 -0.373285122439995, -98.1619359692944 65.155855274362))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00018/>
+    a geo:Feature ;
+    rdfs:label "Northwest Pacific Ocean (180W)"@en ;
+    dcterms:identifier "SDN:C19::SVX00018"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((116.789015367244 65.0337439121301, 180 65.0337439121301, 180 0, 116.789015367244 0, 116.789015367244 65.0337439121301))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00020/>
+    a geo:Feature ;
+    rdfs:label "South American freshwater bodies"@en ;
+    dcterms:identifier "SDN:C19::SVX00020"^^xsd:token ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00021/>
+    a geo:Feature ;
+    rdfs:label "Southeast Atlantic Ocean (20W)"@en ;
+    dcterms:identifier "SDN:C19::SVX00021"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-20 0, 20 0, 20 -60, -20 -60, -20 0))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00022/>
+    a geo:Feature ;
+    rdfs:label "Southeast Pacific Ocean (140W)"@en ;
+    dcterms:identifier "SDN:C19::SVX00022"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((67.266667 0.684284229845844, -140 0.684284229845844, -140 -60, 67.266667 -60, 67.266667 0.684284229845844))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00023/>
+    a geo:Feature ;
+    rdfs:label "Southwest Atlantic Ocean (20W)"@en ;
+    dcterms:identifier "SDN:C19::SVX00023"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-69.5857162567506 0, -20 0, -20 -60, -69.5857162567506 -60, -69.5857162567506 0))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00024/>
+    a geo:Feature ;
+    rdfs:label "Southwest Pacific Ocean (140W)"@en ;
+    dcterms:identifier "SDN:C19::SVX00024"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((131.023611 3.50172159876956, -140 3.50172159876956, -140 -60, 131.023611 -60, 131.023611 3.50172159876956))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00025/>
+    a geo:Feature ;
+    rdfs:label "World"@en ;
+    dcterms:identifier "SDN:C19::SVX00025"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-180 90, 180 90, 180 -90, -180 -90, -180 90))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN001/>
+    a geo:Feature ;
+    rdfs:label "Mounts Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN001"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-5.671801 50.152329, -5.198206 50.152329, -5.198206 49.96068, -5.671801 49.96068, -5.671801 50.152329))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN002/>
+    a geo:Feature ;
+    rdfs:label "Plymouth Sound"@en ;
+    dcterms:identifier "SDN:C19::UKMDN002"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-4.248892 50.405638, -4.105946 50.405638, -4.105946 50.292427, -4.248892 50.292427, -4.248892 50.405638))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN003/>
+    a geo:Feature ;
+    rdfs:label "Weymouth Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN003"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-2.478166 50.690864, -2.1484 50.690864, -2.1484 50.539421, -2.478166 50.539421, -2.478166 50.690864))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN004/>
+    a geo:Feature ;
+    rdfs:label "Lyme Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN004"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-3.59979 50.800431, -2.446001 50.800431, -2.446001 50.388656, -3.59979 50.388656, -3.59979 50.800431))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN005/>
+    a geo:Feature ;
+    rdfs:label "Solent"@en ;
+    dcterms:identifier "SDN:C19::UKMDN005"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-1.789143 50.940925, -0.807473 50.940925, -0.807473 50.655327, -1.789143 50.655327, -1.789143 50.940925))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN006/>
+    a geo:Feature ;
+    rdfs:label "Christchurch Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN006"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-1.783162 50.737718, -1.565847 50.737718, -1.565847 50.7054, -1.783162 50.7054, -1.783162 50.737718))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN007/>
+    a geo:Feature ;
+    rdfs:label "Poole Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN007"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-2.089777 50.740662, -1.749722 50.740662, -1.749722 50.578536, -2.089777 50.578536, -2.089777 50.740662))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN008/>
+    a geo:Feature ;
+    rdfs:label "Rye Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN008"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((0.670112 50.956953, 0.966864 50.956953, 0.966864 50.874109, 0.670112 50.874109, 0.670112 50.956953))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN009/>
+    a geo:Feature ;
+    rdfs:label "Barnstaple or Bideford Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN009"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-4.526373 51.203304, -4.067554 51.203304, -4.067554 50.904033, -4.526373 50.904033, -4.526373 51.203304))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN010/>
+    a geo:Feature ;
+    rdfs:label "Bridgwater Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN010"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-3.556599 51.327537, -2.983919 51.327537, -2.983919 51.094136, -3.556599 51.094136, -3.556599 51.327537))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN011/>
+    a geo:Feature ;
+    rdfs:label "Swansea Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN011"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-4.000391 51.667944, -3.72218 51.667944, -3.72218 51.502667, -4.000391 51.502667, -4.000391 51.667944))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN012/>
+    a geo:Feature ;
+    rdfs:label "Carmarthen Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN012"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-4.716649 51.872269, -4.065184 51.872269, -4.065184 51.518205, -4.716649 51.518205, -4.716649 51.872269))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN013/>
+    a geo:Feature ;
+    rdfs:label "Severn Estuary"@en ;
+    dcterms:identifier "SDN:C19::UKMDN013"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-3.198788 51.919964, -2.287589 51.919964, -2.287589 51.23584, -3.198788 51.23584, -3.198788 51.919964))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN014/>
+    a geo:Feature ;
+    rdfs:label "St. Brides Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN014"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-5.3184 51.922062, -5.094861 51.922062, -5.094861 51.714651, -5.3184 51.714651, -5.3184 51.922062))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN015/>
+    a geo:Feature ;
+    rdfs:label "St. George's Channel"@en ;
+    dcterms:identifier "SDN:C19::UKMDN015"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-6.589568 52.301173, -5.193781 52.301173, -5.193781 51.831487, -6.589568 51.831487, -6.589568 52.301173))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN016/>
+    a geo:Feature ;
+    rdfs:label "Caernarfon Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN016"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-4.569748 53.246701, -4.331398 53.246701, -4.331398 52.9274, -4.569748 52.9274, -4.569748 53.246701))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN017/>
+    a geo:Feature ;
+    rdfs:label "Carlingford Lough"@en ;
+    dcterms:identifier "SDN:C19::UKMDN017"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-6.285679 54.146726, -6.055121 54.146726, -6.055121 53.989547, -6.285679 53.989547, -6.285679 54.146726))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN018/>
+    a geo:Feature ;
+    rdfs:label "Morecambe Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN018"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-3.251891 54.386974, -2.685308 54.386974, -2.685308 53.824857, -3.251891 53.824857, -3.251891 54.386974))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN019/>
+    a geo:Feature ;
+    rdfs:label "Strangford Lough"@en ;
+    dcterms:identifier "SDN:C19::UKMDN019"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-5.72834 54.608598, -5.49527 54.608598, -5.49527 54.279875, -5.72834 54.279875, -5.72834 54.608598))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN020/>
+    a geo:Feature ;
+    rdfs:label "Solway Firth"@en ;
+    dcterms:identifier "SDN:C19::UKMDN020"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-4.965239 55.067844, -2.986914 55.067844, -2.986914 54.375635, -4.965239 54.375635, -4.965239 55.067844))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN021/>
+    a geo:Feature ;
+    rdfs:label "Luce Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN021"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-4.964556 54.909026, -4.4068 54.909026, -4.4068 54.625705, -4.964556 54.625705, -4.964556 54.909026))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN022/>
+    a geo:Feature ;
+    rdfs:label "Wigtown Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN022"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-4.444787 54.683219, -4.099056 54.683219, -4.099056 54.985808, -4.444787 54.985808, -4.444787 54.683219))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN023/>
+    a geo:Feature ;
+    rdfs:label "Liverpool Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN023"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-4.311958 53.96993, -2.671846 53.96993, -2.671846 52.783504, -4.311958 52.783504, -4.311958 53.96993))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN024/>
+    a geo:Feature ;
+    rdfs:label "Ribble Estuary"@en ;
+    dcterms:identifier "SDN:C19::UKMDN024"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-3.060802 53.805262, -2.821021 53.805262, -2.821021 53.6408, -3.060802 53.6408, -3.060802 53.805262))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN025/>
+    a geo:Feature ;
+    rdfs:label "Mersey Estuary"@en ;
+    dcterms:identifier "SDN:C19::UKMDN025"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-3.068628 53.455889, -2.680371 53.455889, -2.680371 53.245121, -3.068628 53.245121, -3.068628 53.455889))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN026/>
+    a geo:Feature ;
+    rdfs:label "Dee Estuary"@en ;
+    dcterms:identifier "SDN:C19::UKMDN026"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-3.320215 53.424093, -3.039657 53.424093, -3.039657 53.228119, -3.320215 53.228119, -3.320215 53.424093))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN027/>
+    a geo:Feature ;
+    rdfs:label "Cardigan Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN027"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-5.27197 53.040645, -3.834283 53.040645, -3.834283 51.946541, -5.27197 51.946541, -5.27197 53.040645))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN028/>
+    a geo:Feature ;
+    rdfs:label "Tremadog Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN028"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-4.328205 52.932953, -4.048563 52.932953, -4.048563 52.798415, -4.328205 52.798415, -4.328205 52.932953))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN029/>
+    a geo:Feature ;
+    rdfs:label "Belfast Lough"@en ;
+    dcterms:identifier "SDN:C19::UKMDN029"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-5.932802 54.782645, -5.604049 54.782645, -5.604049 54.607174, -5.932802 54.607174, -5.932802 54.782645))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN030/>
+    a geo:Feature ;
+    rdfs:label "North Channel"@en ;
+    dcterms:identifier "SDN:C19::UKMDN030"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-6.166288 55.62523, -4.856702 55.62523, -4.856702 54.211573, -6.166288 54.211573, -6.166288 55.62523))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN031/>
+    a geo:Feature ;
+    rdfs:label "Lough Foyle"@en ;
+    dcterms:identifier "SDN:C19::UKMDN031"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-7.342805 55.24537, -6.8535 55.24537, -6.8535 54.956736, -7.342805 54.956736, -7.342805 55.24537))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN032/>
+    a geo:Feature ;
+    rdfs:label "Sound of Jura"@en ;
+    dcterms:identifier "SDN:C19::UKMDN032"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-6.151701 56.272716, -5.299566 56.272716, -5.299566 55.367397, -6.151701 55.367397, -6.151701 56.272716))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN033/>
+    a geo:Feature ;
+    rdfs:label "Firth of Lorn"@en ;
+    dcterms:identifier "SDN:C19::UKMDN033"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-6.048401 56.969342, -4.934555 56.969342, -4.934555 55.961122, -6.048401 55.961122, -6.048401 56.969342))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN034/>
+    a geo:Feature ;
+    rdfs:label "Firth of Clyde"@en ;
+    dcterms:identifier "SDN:C19::UKMDN034"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-5.83493 56.471122, -4.331275 56.471122, -4.331275 54.885078, -5.83493 54.885078, -5.83493 56.471122))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN035/>
+    a geo:Feature ;
+    rdfs:label "Kilbrannan Sound"@en ;
+    dcterms:identifier "SDN:C19::UKMDN035"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-5.538141 55.810485, -5.24548 55.810485, -5.24548 55.45499, -5.538141 55.45499, -5.538141 55.810485))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN036/>
+    a geo:Feature ;
+    rdfs:label "Little Minch"@en ;
+    dcterms:identifier "SDN:C19::UKMDN036"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-7.233532 57.654663, -6.553322 57.654663, -6.553322 57.40673, -7.233532 57.40673, -7.233532 57.654663))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN037/>
+    a geo:Feature ;
+    rdfs:label "Sea of the Hebrides"@en ;
+    dcterms:identifier "SDN:C19::UKMDN037"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-7.662207 57.599962, -5.372056 57.599962, -5.372056 56.374818, -7.662207 56.374818, -7.662207 57.599962))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN038/>
+    a geo:Feature ;
+    rdfs:label "Northern Minch"@en ;
+    dcterms:identifier "SDN:C19::UKMDN038"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-7.511826 58.63073, -4.835844 58.63073, -4.835844 57.041349, -7.511826 57.041349, -7.511826 58.63073))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN039/>
+    a geo:Feature ;
+    rdfs:label "St. Magnus Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN039"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-1.699614 60.503747, -1.257318 60.503747, -1.257318 60.273211, -1.699614 60.273211, -1.699614 60.503747))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN040/>
+    a geo:Feature ;
+    rdfs:label "Thames Estuary"@en ;
+    dcterms:identifier "SDN:C19::UKMDN040"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((0.248911 51.573154, 1.429283 51.573154, 1.429283 51.266863, 0.248911 51.266863, 0.248911 51.573154))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN041/>
+    a geo:Feature ;
+    rdfs:label "Blackwater Estuary"@en ;
+    dcterms:identifier "SDN:C19::UKMDN041"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((0.682348 51.866938, 1.057928 51.866938, 1.057928 51.664707, 0.682348 51.664707, 0.682348 51.866938))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN042/>
+    a geo:Feature ;
+    rdfs:label "The Wash"@en ;
+    dcterms:identifier "SDN:C19::UKMDN042"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-0.007793 53.170645, 0.558268 53.170645, 0.558268 52.739109, -0.007793 52.739109, -0.007793 53.170645))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN043/>
+    a geo:Feature ;
+    rdfs:label "Humber Estuary"@en ;
+    dcterms:identifier "SDN:C19::UKMDN043"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-0.789063 53.831931, 0.178388 53.831931, 0.178388 53.480805, -0.789063 53.480805, -0.789063 53.831931))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN044/>
+    a geo:Feature ;
+    rdfs:label "Bridlington Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN044"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-0.238945 54.132972, 0.119202 54.132972, 0.119202 53.597962, -0.238945 53.597962, -0.238945 54.132972))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN045/>
+    a geo:Feature ;
+    rdfs:label "Tees Bay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN045"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-1.212684 54.699222, -1.041938 54.699222, -1.041938 54.560296, -1.212684 54.560296, -1.212684 54.699222))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN046/>
+    a geo:Feature ;
+    rdfs:label "Firth of Forth"@en ;
+    dcterms:identifier "SDN:C19::UKMDN046"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-3.849235 56.275002, -2.554731 56.275002, -2.554731 55.853468, -3.849235 55.853468, -3.849235 56.275002))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN047/>
+    a geo:Feature ;
+    rdfs:label "Firth of Tay"@en ;
+    dcterms:identifier "SDN:C19::UKMDN047"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-3.379359 56.517411, -2.747818 56.517411, -2.747818 56.326438, -3.379359 56.326438, -3.379359 56.517411))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN048/>
+    a geo:Feature ;
+    rdfs:label "Moray Firth"@en ;
+    dcterms:identifier "SDN:C19::UKMDN048"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-4.490557 57.97304, -3.277641 57.97304, -3.277641 57.424671, -4.490557 57.424671, -4.490557 57.97304))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN049/>
+    a geo:Feature ;
+    rdfs:label "Dornoch Firth"@en ;
+    dcterms:identifier "SDN:C19::UKMDN049"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-4.363134 58.004131, -3.772059 58.004131, -3.772059 57.752077, -4.363134 57.752077, -4.363134 58.004131))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN050/>
+    a geo:Feature ;
+    rdfs:label "Pentland Firth"@en ;
+    dcterms:identifier "SDN:C19::UKMDN050"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-3.3757 58.791276, -2.959717 58.791276, -2.959717 58.63386, -3.3757 58.63386, -3.3757 58.791276))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN051/>
+    a geo:Feature ;
+    rdfs:label "Scapa Flow"@en ;
+    dcterms:identifier "SDN:C19::UKMDN051"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-3.403708 58.991706, -2.894615 58.991706, -2.894615 58.756063, -3.403708 58.756063, -3.403708 58.991706))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN052/>
+    a geo:Feature ;
+    rdfs:label "Stronsay Firth"@en ;
+    dcterms:identifier "SDN:C19::UKMDN052"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-3.115032 59.238553, -2.543717 59.238553, -2.543717 58.860211, -3.115032 58.860211, -3.115032 59.238553))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN053/>
+    a geo:Feature ;
+    rdfs:label "Westray Firth"@en ;
+    dcterms:identifier "SDN:C19::UKMDN053"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-3.219673 59.343044, -2.816584 59.343044, -2.816584 59.022014, -3.219673 59.022014, -3.219673 59.343044))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN054/>
+    a geo:Feature ;
+    rdfs:label "Yell Sound"@en ;
+    dcterms:identifier "SDN:C19::UKMDN054"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-1.396898 60.696275, -1.05284 60.696275, -1.05284 60.328169, -1.396898 60.328169, -1.396898 60.696275))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN055/>
+    a geo:Feature ;
+    rdfs:label "Poole Harbour"@en ;
+    dcterms:identifier "SDN:C19::UKMDN055"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-2.084423 50.740995, -1.932983 50.740995, -1.932983 50.659636, -2.084423 50.659636, -2.084423 50.740995))"^^geo:wktLiteral ;
+    ] ;
+.
+
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN056/>
+    a geo:Feature ;
+    rdfs:label "Menai Strait"@en ;
+    dcterms:identifier "SDN:C19::UKMDN056"^^xsd:token ;
+    geo:hasGeometry [
+        a geo:Geometry ;
+        geo:asWKT "POLYGON((-4.36577626471796 53.3299731363398, -3.95996733538543 53.3299731363398, -3.95996733538543 53.0918041417739, -4.36577626471796 53.0918041417739, -4.36577626471796 53.3299731363398))"^^geo:wktLiteral ;
+    ] ;
+.

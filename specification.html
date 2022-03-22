@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+  <meta charset="UTF-8">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <link href='//fonts.googleapis.com/css?family=Spartan:300,400' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Bebas+Neue:300,400' rel='stylesheet' type='text/css'>
+  <link href="style/surround.css" rel="stylesheet" type="text/css">
+  <title>SpacePrez Profile - Spec</title>
+</head>
+<body>
+  <div class="header" style="grid-column:1;"></div>
+  <div id="header" class="header" style="grid-column:2; display:grid; grid-template-columns:180px auto; grid-template-rows:50% 50%;">
+    <div id="logo" style="grid-column:1; grid-row:1/3">
+      <a href="https://surroundaustralia.com">
+        <img alt="SURROUND Logo" style="width:300px; margin-top:10px" src="style/logo-white.144b0ef3.svg" /></a>
+    </div>
+  </div><!-- #header -->
+  <div class="header" style="grid-column:3;"></div>
+  <div id="content" style="grid-column:2;">
+    <h1>SpacePrez Profile - Specification</h1>
+    <section id="metadata">
+      <dl>
+        <dt>URI</dt>
+        <dd><code><a href="https://w3id.org/profile/spaceprez/spec">https://w3id.org/profile/spaceprez/spec</a></code></dd>
+        <dt>Title</dt>
+        <dd>SpacePrez Profile - Specification Document</dd>
+        <dt>Definition</dt>
+        <dd>This document specifies the SpacePrez Profile. It is to be used to inform people about the requirements that need to be met by data claiming to conform to the profile.</dd>
+        <dt>Created</dt>
+        <dd>2022-03-22</dd>
+        <dt>Modified</dt>
+        <dd>2022-03-22</dd>
+        <dt>Creator</dt>
+        <dd><a href="https://linked.data.gov.au/org/surround">SURROUND Australia Pty Ltd</a></dd>
+        <dt>Publisher</dt>
+        <dd><a href="https://linked.data.gov.au/org/surround">SURROUND Australia Pty Ltd</a></dd>
+        <dt>Further metadata</dt>
+        <dd>This specification is part of the <em>SpacePrez Profile</em>. See that profile's main document for License &amp; Rights information and other metadata not given here.</dd>
+        <dt>Profile URI</dt>
+        <dd><code><a href="https://w3id.org/profile/spaceprez">https://w3id.org/profile/spaceprez</a></code></dd>
+        <dt>License</dt>
+        <dd><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></dd>
+      </dl>
+    </section>
+    <section id="abstract">
+      <h2>Abstract</h2>
+      <p>
+        This is a data <em>profile</em> defined to capture the data requirements of the <em>SpacePrez</em> tool.
+      </p>
+      <p>
+        <em>SpacePrez</em> is the spatially-configured <a href="https://github.com/surroundaustralia/Prez/">Prez</a> application.
+      </p>
+      <p>
+        Note that most of the constraints that this profile places on data are inherited from the <a href="https://w3id.org/profile/ogcldapi">OGC LDA PI Profile</a> which ensures RDF spatial data is formulated according to <a href="https://opengeospatial.github.io/ogc-geosparql/geosparql11/spec.html">GeoSPARQL 1.1</a> and that it has all the elements needed for <a href="https://ogcapi.ogc.org/features/">OGC API - Features Core</a> APIs.
+      </p>
+      <p>
+        This specification is not to be used for testing conformance of RDF resources to this profile. That role belongs to the <em>validation</em> resource within this profile:
+      </p>
+      <ul>
+        <li><a href="https://w3id.org/profile/spaceprez/validation">https://w3id.org/profile/spaceprez/validation</a></li>
+      </ul>
+      <p>
+        For the list of all resources within this profile, see the profile definition:
+      </p>
+      <ul>
+        <li><a href="https://w3id.org/profile/spaceprez">https://w3id.org/profile/spaceprez</a></li>
+      </ul>
+    </section>
+    <section id="namespaces">
+      <h2>Namespaces</h2>
+      <p>
+        This document refers to elements of various ontologies by short codes using namespace prefixes. The prefixes and their corresponding namespaces' URIs are:
+      </p>
+      <dl>
+        <dt>geo</dt>
+        <dd>http://www.opengis.net/ont/geosparql#</dd>
+        <dt>prof</dt>
+        <dd><code>http://www.w3.org/ns/dx/prof/</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+      </dl>
+    </section>
+    <section id="intro">
+      <h2>1. Introduction</h2>
+      <p>
+        <em>SpacePrez</em> is a spatial data configured version of the <a href="https://github.com/surroundaustralia/Prez/">Prez</a> application. Prez is a spatial data, <a href="https://www.w3.org/wiki/LinkedData">Linked Data</a> <em>API</em>, that is, an application used to deliver spatial data in Semantic Web<sup><a href="#semantic-web">ref</a></sup> form, over the web.
+      </p>
+      <p>
+        In addition to providing data according to Linked Data and Semantic Web conventions, SpacePrez is structured according to the OGC API <em>Features</em><sup><a href="#ogcapi">ref</a></sup> standard.
+      </p>
+      <p>
+        Prez and SpacePrez draw their data from <a href="https://www.w3.org/RDF/">RDF</a> graph databases which must contain data constructed according to the GeoSPARQL 1.1 standard<sup><a href="#geosparql">ref</a></sup>. GeoSPARQL provides a specification of requirements for data and a validator which can be used to validate that data does, in fact, conform to GeoSPARQL 1.1.
+      </p>
+      <p>
+        The OGC LD API Profile<sup><a href="#ogcldapi">ref</a></sup> is a <em>profile</em> - a supplementary constraining specification - of GeoSPARQL 1.1 that provides requirements for OGC APIs based on GeoSPARQL data. The OGC LD API Profile also supplies a validator that can be used to validate data according to its rules.
+      </p>
+      <p>
+        The document is the specification of requirements for the SpacePrez Profile. This is a profile of the OGC LD API Profile and contains just a few additional rules for data, on top of those from GeoSPARQL 1.1 and the OGC LD API Profile, that ensure that the system-specific data requirements of the SpacePrez tool are met. Like the GeoSPARQL and OGC LD API Profile, this profile also provides a validator that can be used to validate data for SpacePrez.
+      </p>
+      <p>
+        Since this profile only really makes sense within used with the OGC LD API and GeoSPARQL 1.1, this profile also contains a "compounded validated" which contains this profile, the OGC LD API and GeoSPARQL 1.1. validators all together. It can be used for complete data validation for SpacePrez.
+      </p>
+      <p>
+        This specification's rules/requirements - are given IDs and are <span style="color:darkred;">indicated in red text</span> in the next section.
+      </p>
+    </section>
+    <section id="elements">
+      <h2>2. Requirements</h2>
+      <p>
+          SpacePrez, the tool, can only interpret GeoSPARQL 1.1<sup><a href="#geosparql">ref</a></sup> data with GeoJSON geometry serializations, so:
+      </p>
+      <p class="req">
+        <strong>Requirement GJ</strong>: All GeoSPARQL Geometry objects must contain a GeoJSON serialization
+      </p>
+      <p>
+        Note that since much GeoSPARQL data is presented with WKT geometry serializations, this profile provides a Python script that can be used to convert those serializations to GeoJSON.
+      </p>
+    </section>
+    <section id="references">
+      <h2>3. References</h2>
+      <dl>
+        <dt><a id="geosparql"></a>GeoSPARQL 1.1</dt>
+        <dd>
+          Nicholas J. Car, Timo Homburg, Matthew Perry, John Herring, Frans Knibbe, Simon J.D. Cox, Joseph Abhayaratna and Mathias Bonduel (eds.). <em>OGC GeoSPARQL - A Geographic Query Language for RDF Data</em>. 2022. OGC® Implementation Specification. URL: <a href="http://www.opengis.net/doc/IS/geosparql/1.1">http://www.opengis.net/doc/IS/geosparql/1.1</a>
+        </dd>
+        <dt><a id="ogcapi"></a>OGC API Features</dt>
+        <dd>Clemens Portele, Panagiotis (Peter) A. Vretanos, Charles Heazel (eds.) <em>OGC API - Features - Part 1: Core</em>. 2019. OGC® Implementation Standard. URL: <a href="http://www.opengis.net/doc/IS/ogcapi-features-1/1.0">http://www.opengis.net/doc/IS/ogcapi-features-1/1.0</a></dd>
+        <dt><a id="ogcldapi"></a>OGC LD API Profile</dt>
+        <dd>SURROUND Australia Pty Ltd. <em>OGC LD API Profile</em>. 2021. Data Profile. URL: <a href="https://w3id.org/profile/ogcldapi">https://w3id.org/profile/ogcldapi</a></dd>
+        <dt><a id="semantic-web"></a>Semantic Web</dt>
+        <dd>
+          World Wide Web Consortium. <em>Semantic Web</em> 2015. Web Page. URL: <a href="https://www.w3.org/standards/semanticweb/">https://www.w3.org/standards/semanticweb/</a>, accessed 2020-06-14
+        </dd>
+      </dl>
+    </section>
+  </div><!-- #content -->
+  <div class="footer" style="grid-column:1;"></div>
+  <div class="footer" style="grid-column:2; display:grid; grid-column:70% 30%;">
+    <div style="grid-column:1;">
+      <img src="style/logo-dark.41edee3d.svg" alt="SURROUND white logo" />
+    </div>
+    <div style="grid-column:2;">
+      <div style="float:right;">
+        <h4>SURROUND Australia Pty Ltd</h4>
+        <p><a href="https://surroundaustralia.com">https://surroundaustralia.com</a></p>
+        <p style="font-style: italic;">
+          Level 9, Nishi Building<br />
+          2 Phillip Law Street, New Acton<br />
+          Canberra 2601<br />
+          Australia
+        </p>
+        <p><a href="info@surroundaustralia.com">info@surroundaustralia.com</a></p>
+        <p>
+          <a href="https://surroundaustralia.com/privacy-policy">Privacy Policy</a>
+        </p>
+        <p>&copy; SURROUND Australia Pty. Ltd. 2021</p>
+      </div>
+    </div>
+  </div><!-- #footer -->
+  <div class="footer" style="grid-column:3;"></div>
+</body>
+</html>

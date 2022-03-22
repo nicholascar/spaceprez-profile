@@ -1,0 +1,105 @@
+body, html {
+    margin:0;
+    padding:0;
+    width:100%;
+}
+
+body {
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr ;
+    grid-template-rows: 140px auto 400px;
+
+    color: rgb(50, 50, 50);
+    font-family: Spartan, Arial, sans-serif;
+    line-height: 1.2em;
+}
+
+#header {
+    overflow: hidden;
+}
+
+.header {
+    background-color: rgb(35, 31, 32);
+    border-bottom: solid 10px rgb(154, 74, 255);
+}
+
+#slogan {
+    font-size: 18px;
+    font-weight: 400;
+    color: #2f2f2f;
+
+    overflow: hidden;
+}
+
+#nav a {
+    color: #333;
+    text-decoration: none;
+    font-family: sans-serif;
+    margin: 0 10px 0 10px;
+}
+
+
+#content {
+    margin-top: 30px;
+}
+
+h1 {
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    padding: 0;
+    margin: 0 0 0.2em 0;
+    color: #2f2f2f;
+    font-size: 3em;
+    font-weight: normal;
+    line-height: 1.1;
+}
+
+h2 {
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-size: 2em;
+}
+
+h3 {
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-size: 1.75em;
+}    
+
+h4 {
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-size: 1.3em;
+}
+
+.footer {
+    background-color: rgb(223, 227, 229);
+    padding-top:30px;
+}
+
+a {
+    color: rgb(154, 74, 255);
+    text-decoration: none;
+}
+
+section {
+    margin-top: 2em;
+}
+dt {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+dd {
+    margin-bottom: 1em;
+}
+
+p.quote {
+    margin: 20px;
+    font-style: italic;
+    width: 50%;
+}
+
+p.req {
+    color: darkred;
+}
+
+code {
+    font-size: 1.2em;
+}
