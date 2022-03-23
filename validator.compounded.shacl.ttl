@@ -1,6 +1,7 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geosh: <http://www.opengis.net/def/geosparql/validator/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -204,7 +205,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 #   GeoSPARQL 1.1 Validator
 #
 
-<http://www.opengis.net/def/geosparql/validator/S1-hasGeometry-hasSerialization>
+#################################################
+# Shape 1 (1a-1d) - geometry serialization uniqueness
+#################################################
+
+geosh:S1-hasGeometry-hasSerialization
     a sh:NodeShape ;
 	sh:targetClass geo:Geometry ;
 	sh:targetObjectsOf
@@ -218,14 +223,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		geo:asKML ,
 		geo:asDGGS ;
 	sh:property
-		<S1-a-hasGeometry-hasSerialization-sub> ,
-		<S1-b-hasGeometry-hasSerialization-sub> ,
-		<S1-c-hasGeometry-hasSerialization-sub> ,
-		<S1-d-hasGeometry-hasSerialization-sub> ,
-		<S1-e-hasGeometry-hasSerialization-sub> ;
+		geosh:S1-a-hasGeometry-hasSerialization-sub ,
+		geosh:S1-b-hasGeometry-hasSerialization-sub ,
+		geosh:S1-c-hasGeometry-hasSerialization-sub ,
+		geosh:S1-d-hasGeometry-hasSerialization-sub ,
+		geosh:S1-e-hasGeometry-hasSerialization-sub ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S1-a-hasGeometry-hasSerialization-sub>
+geosh:S1-a-hasGeometry-hasSerialization-sub
 	a sh:PropertyShape ;
 	sh:path geo:asWKT ;
 	sh:maxCount 1 ;
@@ -265,28 +270,28 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		""" ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S1-b-hasGeometry-hasSerialization-sub>
+geosh:S1-b-hasGeometry-hasSerialization-sub
 	a sh:PropertyShape ;
 	sh:path geo:asGML ;
 	sh:maxCount 1 ;
 	sh:message "Each Geometry node can have a maximum of one outgoing geo:asGML relation."@en ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S1-c-hasGeometry-hasSerialization-sub>
+geosh:S1-c-hasGeometry-hasSerialization-sub
 	a sh:PropertyShape ;
 	sh:path geo:asGeoJSON ;
 	sh:maxCount 1 ;
 	sh:message "Each Geometry node can have a maximum of one outgoing geo:asGeoJSON relation."@en ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S1-d-hasGeometry-hasSerialization-sub>
+geosh:S1-d-hasGeometry-hasSerialization-sub
 	a sh:PropertyShape ;
 	sh:path geo:asKML ;
 	sh:maxCount 1 ;
 	sh:message "Each Geometry node can have a maximum of one outgoing geo:asKML relation."@en ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S1-e-hasGeometry-hasSerialization-sub>
+geosh:S1-e-hasGeometry-hasSerialization-sub
 	a sh:PropertyShape ;
 	sh:path geo:asDGGS ;
 	sh:maxCount 1 ;
@@ -297,31 +302,31 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 # Shape 2 (2a-2d) - Geometry / Feature disjoint
 #################################################
 
-<http://www.opengis.net/def/geosparql/validator/S2-a-Geometry>
+geosh:S2-a-Geometry
 	a sh:NodeShape ;
 	sh:targetClass geo:Geometry ;
-	sh:property <S2-hasGeometry-hasGeometry-sub> ;
+	sh:property geosh:S2-hasGeometry-hasGeometry-sub ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S2-b-hasGeometry-hasGeometry>
+geosh:S2-b-hasGeometry-hasGeometry
     a sh:NodeShape ;
 	sh:targetObjectsOf geo:hasGeometry ;
-	sh:property <S2-hasGeometry-hasGeometry-sub> ;
+	sh:property geosh:S2-hasGeometry-hasGeometry-sub ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S2-c-hasDefaultGeometry-hasGeometry>
+geosh:S2-c-hasDefaultGeometry-hasGeometry
     a sh:NodeShape ;
 	sh:targetObjectsOf geo:hasDefaultGeometry ;
-	sh:property <S2-hasGeometry-hasGeometry-sub> ;
+	sh:property geosh:S2-hasGeometry-hasGeometry-sub ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S2-d-defaultGeometry-hasGeometry>
+geosh:S2-d-defaultGeometry-hasGeometry
     a sh:NodeShape ;
 	sh:targetObjectsOf geo:defaultGeometry ;
-	sh:property <S2-hasGeometry-hasGeometry-sub> ;
+	sh:property geosh:S2-hasGeometry-hasGeometry-sub ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S2-hasGeometry-hasGeometry-sub>
+geosh:S2-hasGeometry-hasGeometry-sub
 	a sh:PropertyShape ;
 	sh:path [
 		sh:alternativePath (
@@ -381,7 +386,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 # Shape 3 - serializations must be literals
 #################################################
 
-<http://www.opengis.net/def/geosparql/validator/S3-hasSerialization-literal>
+geosh:S3-hasSerialization-literal
 	a sh:NodeShape ;
 	sh:targetObjectsOf
 		geo:hasSerialization ,
@@ -419,7 +424,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 # Shape 4-5-6-7-8 - serialization datatypes match indicating properties
 #################################################
 
-<http://www.opengis.net/def/geosparql/validator/S4-asWKT-wktLiteral>
+geosh:S4-asWKT-wktLiteral
 	a sh:NodeShape ;
 	sh:targetObjectsOf geo:asWKT ;
 	sh:datatype geo:wktLiteral ;
@@ -457,28 +462,28 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		""" ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S5-asGML-gmlLiteral>
+geosh:S5-asGML-gmlLiteral
 	a sh:NodeShape ;
 	sh:targetObjectsOf geo:asGML ;
 	sh:datatype geo:gmlLiteral ;
 	sh:message "The target of a geo:asGML property should be an RDF literal with datatype geo:gmlLiteral."@en ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S6-asGeoJSON-geoJSONLiteral>
+geosh:S6-asGeoJSON-geoJSONLiteral
 	a sh:NodeShape ;
 	sh:targetObjectsOf geo:asGeoJSON ;
 	sh:datatype geo:geoJSONLiteral ;
 	sh:message "The target of a geo:asGeoJSON property should be an RDF literal with datatype geo:geoJSONLiteral."@en ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S7-asKML-kmlLiteral>
+geosh:S7-asKML-kmlLiteral
 	a sh:NodeShape ;
 	sh:targetObjectsOf geo:asKML ;
 	sh:datatype geo:kmlLiteral ;
 	sh:message "The target of a geo:asKML property should be an RDF literal with datatype geo:kmlLiteral."@en ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S8-asDGGS-dggsLiteral>
+geosh:S8-asDGGS-dggsLiteral
 	a sh:NodeShape ;
 	sh:targetObjectsOf geo:asDGGS ;
 	sh:property [
@@ -514,13 +519,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 # Shape 9-10-11-12-13-14 (14a-14d) - geometry metadata properties can only exist once
 #################################################
 
-<http://www.opengis.net/def/geosparql/validator/S09-many-coordinateDimension-one>
+geosh:S09-many-coordinateDimension-one
 	a sh:NodeShape ;
-	sh:property <S09-many-coordinateDimension-one-sub> ;
+	sh:property geosh:S09-many-coordinateDimension-one-sub ;
 	sh:targetSubjectsOf geo:coordinateDimension ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S09-many-coordinateDimension-one-sub>
+geosh:S09-many-coordinateDimension-one-sub
 	a sh:PropertyShape ;
 	sh:path geo:coordinateDimension ;
 	sh:maxCount 1 ;
@@ -550,100 +555,100 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		""" ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S10-many-dimension-one>
+geosh:S10-many-dimension-one
 	a sh:NodeShape ;
-	sh:property <S10-many-dimension-one-sub> ;
+	sh:property geosh:S10-many-dimension-one-sub ;
 	sh:targetSubjectsOf geo:dimension ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S10-many-dimension-one-sub>
+geosh:S10-many-dimension-one-sub
 	a sh:PropertyShape ;
 	sh:path geo:dimension ;
 	sh:maxCount 1 ;
 	sh:message "A geo:Geometry node should have maximum of one outgoing geo:dimension property."@en ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S11-many-isEmpty-one>
+geosh:S11-many-isEmpty-one
 	a sh:NodeShape ;
-	sh:property <S11-many-isEmpty-one-sub> ;
+	sh:property geosh:S11-many-isEmpty-one-sub ;
 	sh:targetSubjectsOf geo:isEmpty ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S11-many-isEmpty-one-sub>
+geosh:S11-many-isEmpty-one-sub
 	a sh:PropertyShape ;
 	sh:path geo:isEmpty ;
 	sh:maxCount 1 ;
 	sh:message "A geo:Geometry node should have maximum of one outgoing geo:isEmpty property."@en ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S12-many-isSimple-one>
+geosh:S12-many-isSimple-one
 	a sh:NodeShape ;
-	sh:property <S12-many-isSimple-one-sub> ;
+	sh:property geosh:S12-many-isSimple-one-sub ;
 	sh:targetSubjectsOf geo:isSimple ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S12-many-isSimple-one-sub>
+geosh:S12-many-isSimple-one-sub
 	a sh:PropertyShape ;
 	sh:path geo:isSimple ;
 	sh:maxCount 1 ;
 	sh:message "A geo:Geometry node should have a maximum one outgoing geo:isSimple property."@en ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S13-many-spatialDimension-one>
+geosh:S13-many-spatialDimension-one
 	a sh:NodeShape ;
-	sh:property <S13-many-spatialDimension-one-sub> ;
+	sh:property geosh:S13-many-spatialDimension-one-sub ;
 	sh:targetSubjectsOf geo:spatialDimension ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S13-many-spatialDimension-one-sub>
+geosh:S13-many-spatialDimension-one-sub
 	a sh:PropertyShape ;
 	sh:path geo:spatialDimension ;
 	sh:maxCount 1 ;
 	sh:message "A geo:Geometry node should have maximum of one outgoing geo:spatialDimension property."@en ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S14-many-hasSpatialResolution-one>
+geosh:S14-many-hasSpatialResolution-one
 	a sh:NodeShape ;
 	sh:property
-		<S14-many-hasSpatialResolution-one-sub> ,
-		<S14-many-hasMetricSpatialResolution-one-sub> ;
+		geosh:S14-many-hasSpatialResolution-one-sub ,
+		geosh:S14-many-hasMetricSpatialResolution-one-sub ;
 	sh:targetSubjectsOf
 		geo:hasSpatialResolution ,
 		geo:hasMetricSpatialResolution ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S14-many-hasSpatialResolution-one-sub>
+geosh:S14-many-hasSpatialResolution-one-sub
 	a sh:PropertyShape ;
 	sh:path geo:hasSpatialResolution ;
 	sh:maxCount 1 ;
 	sh:message "A geo:Geometry node should have maximum of one outgoing geo:hasSpatialResolution property."@en ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S14-many-hasMetricSpatialResolution-one-sub>
+geosh:S14-many-hasMetricSpatialResolution-one-sub
 	a sh:PropertyShape ;
 	sh:path geo:hasMetricSpatialResolution ;
 	sh:maxCount 1 ;
 	sh:message "A geo:Geometry node should have maximum of one outgoing geo:hasMetricSpatialResolution property."@en ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S15-many-hasSpatialAccuracy-one>
+geosh:S15-many-hasSpatialAccuracy-one
 	a sh:NodeShape ;
 	sh:property
-		<S15-many-hasSpatialAccuracy-one-sub> ,
-		<S15-many-hasMetricSpatialAccuracy-one-sub> ;
+		geosh:S15-many-hasSpatialAccuracy-one-sub ,
+		geosh:S15-many-hasMetricSpatialAccuracy-one-sub ;
 	sh:targetSubjectsOf
 		geo:hasSpatialAccuracy ,
 		geo:hasMetricSpatialAccuracy ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S15-many-hasSpatialAccuracy-one-sub>
+geosh:S15-many-hasSpatialAccuracy-one-sub
 	a sh:PropertyShape ;
 	sh:path geo:hasSpatialAccuracy ;
 	sh:maxCount 1 ;
 	sh:message "A geo:Geometry node should have maximum of one outgoing geo:hasSpatialAccuracy property."@en ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S15-many-hasMetricSpatialAccuracy-one-sub>
+geosh:S15-many-hasMetricSpatialAccuracy-one-sub
 	a sh:PropertyShape ;
 	sh:path geo:hasMetricSpatialAccuracy ;
 	sh:maxCount 1 ;
@@ -654,27 +659,27 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 # Shape 16-17-18-19-20 - basic geometry serialization pattern matching
 #################################################
 
-<http://www.opengis.net/def/geosparql/validator/S16-wkt-content>
+geosh:S16-wkt-content
 	a sh:NodeShape ;
-	sh:property <S16-wkt-content-sub-start> ;
+	sh:property geosh:S16-wkt-content-sub-start ;
 	sh:targetSubjectsOf geo:asWKT ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S16-wkt-content-sub-start>
+geosh:S16-wkt-content-sub-start
 	a sh:PropertyShape ;
 	sh:path geo:asWKT ;
-	sh:pattern "^\\s*$|^\\s*(P|C|S|L|T|<|p|c|s|l|t)" ; # starts with space, < or P, C etc.
+	sh:pattern "^\\s*$|^\\s*(M|P|C|S|L|T|<m||p|c|s|l|t)" ; # starts with space, < or P, C etc.
 	sh:flags "m" ;
 	sh:message "The content of an RDF literal with an incoming geo:asWKT relation must conform to a well-formed WKT string, as defined by its official specification (Simple Features Access)."@en ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S17-gml-content>
+geosh:S17-gml-content
 	a sh:NodeShape ;
-	sh:property <S17-gml-content-sub-start> ;
+	sh:property geosh:S17-gml-content-sub-start ;
 	sh:targetSubjectsOf geo:asGML ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S17-gml-content-sub-start>
+geosh:S17-gml-content-sub-start
 	a sh:PropertyShape ;
 	sh:path geo:asGML ;
 	sh:pattern "^\\s*$|^\\s*(<)(.+)(>)\\s*$" ;  # starts with < ends with >
@@ -682,13 +687,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	sh:message "The content of an RDF literal with an incoming geo:asGML relation must conform to a well-formed GML geometry XML string, as defined by its official specification."@en ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S18-geojson-content>
+geosh:S18-geojson-content
 	a sh:NodeShape ;
-	sh:property <S18-geojson-content-sub-start> ;
+	sh:property geosh:S18-geojson-content-sub-start ;
 	sh:targetSubjectsOf geo:asGeoJSON ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S18-geojson-content-sub-start>
+geosh:S18-geojson-content-sub-start
 	a sh:PropertyShape ;
 	sh:path geo:asGeoJSON ;
 	sh:pattern "^\\s*$|^\\s*({)(.*)(})\\s*$" ;  # starts with { ends with }
@@ -696,13 +701,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	sh:message "The content of an RDF literal with an incoming geo:asGeoJSON relation must conform to a well-formed GeoJSON geometry string, as defined by its official specification."@en ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S19-kml-content>
+geosh:S19-kml-content
 	a sh:NodeShape ;
-	sh:property <S19-kml-content-sub-start> ;
+	sh:property geosh:S19-kml-content-sub-start ;
 	sh:targetSubjectsOf geo:asKML ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S19-kml-content-sub-start>
+geosh:S19-kml-content-sub-start
 	a sh:PropertyShape ;
 	sh:path geo:asKML ;
 	sh:pattern "^\\s*$|^\\s*(<)(.+)(>)\\s*$" ;  # starts with < ends with >
@@ -710,15 +715,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	sh:message "The content of an RDF literal with an incoming geo:asKML relation must conform to a well-formed KML geometry XML string, as defined by its official specification."@en ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S20-dggs-content>
+geosh:S20-dggs-content
 	a sh:NodeShape ;
-	sh:property <S20-dggs-content-sub-start> ;
+	sh:property geosh:S20-dggs-content-sub-start ;
 	sh:targetSubjectsOf geo:asDGGS ;
 	sh:deactivated true ;
 	rdfs:comment "This shape is deactivated since the precise syntax of DGGS literals is now known"@en ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S20-dggs-content-sub-start>
+geosh:S20-dggs-content-sub-start
 	a sh:PropertyShape ;
 	sh:path geo:asDGGS ;
 	sh:pattern "^$" ;
@@ -731,13 +736,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 # Shape 21 - dimension checks
 #################################################
 
-<http://www.opengis.net/def/geosparql/validator/S21-dimension-coordinateDimension>
+geosh:S21-dimension-coordinateDimension
 	a sh:NodeShape ;
-	sh:property <S21-dimension-coordinateDimension-sub> ;
+	sh:property geosh:S21-dimension-coordinateDimension-sub ;
 	sh:targetSubjectsOf geo:dimension ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S21-dimension-coordinateDimension-sub>
+geosh:S21-dimension-coordinateDimension-sub
 	a sh:PropertyShape ;
 	sh:path geo:coordinateDimension ;
 	sh:sparql [
@@ -785,15 +790,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 # Shape 22 - geo:FeatureCollection
 #################################################
 
-<http://www.opengis.net/def/geosparql/validator/S22-FeatureCollectionClass-member-feature>
+geosh:S22-FeatureCollectionClass-member-feature
 	a sh:NodeShape ;
 	sh:property
-	    <S22-FeatureCollectionClass-minOneMember-feature-sub> ,
-	    <S22-FeatureCollectionClass-member-onlyFeature-sub> ;
+	    geosh:S22-FeatureCollectionClass-minOneMember-feature-sub ,
+	    geosh:S22-FeatureCollectionClass-member-onlyFeature-sub ;
 	sh:targetClass geo:FeatureCollection ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S22-FeatureCollectionClass-minOneMember-feature-sub>
+geosh:S22-FeatureCollectionClass-minOneMember-feature-sub
 	a sh:PropertyShape ;
 	sh:path rdfs:member ;
 	sh:minCount 1 ;
@@ -823,7 +828,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		""" ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S22-FeatureCollectionClass-member-onlyFeature-sub>
+geosh:S22-FeatureCollectionClass-member-onlyFeature-sub
 	a sh:PropertyShape ;
 	sh:path rdfs:member ;
 	sh:sparql [
@@ -876,15 +881,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 # Shape 23 - geo:GeometryCollection
 #################################################
 
-<http://www.opengis.net/def/geosparql/validator/S23-GeometryCollectionClass-member-geometry>
+geosh:S23-GeometryCollectionClass-member-geometry
 	a sh:NodeShape ;
 	sh:property
-		<S23-GeometryCollectionClass-minOneMember-geometry-sub> ,
-		<S23-GeometryCollectionClass-member-onlyGeometry-sub> ;
+		geosh:S23-GeometryCollectionClass-minOneMember-geometry-sub ,
+		geosh:S23-GeometryCollectionClass-member-onlyGeometry-sub ;
 	sh:targetClass geo:GeometryCollection ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S23-GeometryCollectionClass-minOneMember-geometry-sub>
+geosh:S23-GeometryCollectionClass-minOneMember-geometry-sub
 	a sh:PropertyShape ;
 	sh:path rdfs:member ;
 	sh:minCount 1 ;
@@ -911,7 +916,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		""" ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S23-GeometryCollectionClass-member-onlyGeometry-sub>
+geosh:S23-GeometryCollectionClass-member-onlyGeometry-sub
 	a sh:PropertyShape ;
 	sh:path rdfs:member ;
 	sh:sparql [
@@ -959,15 +964,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 # Shape 24 - geo:SpatialObjectCollection
 #################################################
 
-<http://www.opengis.net/def/geosparql/validator/S24-SpatialObjectCollection-member-spatialObject>
+geosh:S24-SpatialObjectCollection-member-spatialObject
 	a sh:NodeShape ;
 	sh:property
-		<S24-SpatialObjectCollection-minOneMember-spatialObject-sub> ,
-		<S24-SpatialObjectCollection-member-onlySpatialObject-sub> ;
+		geosh:S24-SpatialObjectCollection-minOneMember-spatialObject-sub ,
+		geosh:S24-SpatialObjectCollection-member-onlySpatialObject-sub ;
 	sh:targetClass geo:SpatialObjectCollection ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S24-SpatialObjectCollection-minOneMember-spatialObject-sub>
+geosh:S24-SpatialObjectCollection-minOneMember-spatialObject-sub
 	a sh:PropertyShape ;
 	sh:path rdfs:member ;
 	sh:minCount 1 ;
@@ -978,7 +983,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		@prefix geo: <http://www.opengis.net/ont/geosparql#> .
 		@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-		<spatialObjectCollection-x>
+		geosh:spatialObjectCollection-x
 		    a geo:SpatialObjectCollection ;
 		    rdfs:member <feature-x>
 		.
@@ -990,13 +995,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		@prefix geo: <http://www.opengis.net/ont/geosparql#> .
 		@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-		<spatialObjectCollection-x>
+		geosh:spatialObjectCollection-x
 		    a geo:SpatialObjectCollection ;
 		.
 		""" ;
 .
 
-<http://www.opengis.net/def/geosparql/validator/S24-SpatialObjectCollection-member-onlySpatialObject-sub>
+geosh:S24-SpatialObjectCollection-member-onlySpatialObject-sub
 	a sh:PropertyShape ;
 	sh:path rdfs:member ;
 	sh:sparql [
@@ -1019,7 +1024,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		@prefix geo: <http://www.opengis.net/ont/geosparql#> .
 		@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-		<spatialObjectCollection-x>
+		geosh:spatialObjectCollection-x
 		    a geo:SpatialObjectCollection ;
 		    rdfs:member <geometry-x> , <feature-y> ;
 		.
@@ -1033,7 +1038,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		@prefix geo: <http://www.opengis.net/ont/geosparql#> .
 		@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-		<spatialObjectCollection-x>
+		geosh:spatialObjectCollection-x
 		    a geo:SpatialObjectCollection ;
 		    rdfs:member <geometry-x> , <feature-y> , <thing-x> ;
 		.
